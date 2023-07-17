@@ -2,22 +2,28 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { HiBars3CenterLeft } from "react-icons/hi2";
+import { useState } from "react";
+import { Fade as Hamburger } from "hamburger-react";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <header className="sticky top-0 p-6 px-20 flex items-start justify-between xl:items-center bg-white">
       {/* Left side */}
-      <div>
-        <Link href="/">
-          <Image
-            src="/images/logo1.png"
-            alt="Logo"
-            width={200}
-            height={100}
-          />
-        </Link>
-      </div>
+
+      <Link href="/">
+        <Image
+          src="/images/logo1.png"
+          alt="Logo"
+          width={200}
+          height={100}
+          objectFit="contain"
+        />
+      </Link>
 
       {/* Center */}
       <div className="hidden lg:block">
@@ -55,8 +61,8 @@ const Header = () => {
       </div>
 
       {/* Hamburger menu */}
-      <div className="lg:hidden bg-gray-400 bg-opacity-40 rounded-full py-4 px-6">
-        <HiBars3CenterLeft className="h-6 w-6 text-white" />
+      <div className="">
+        <Hamburger toggled={isOpen} toggle={setIsOpen} />
       </div>
     </header>
   );
