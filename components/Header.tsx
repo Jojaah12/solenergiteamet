@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { HiBars3CenterLeft } from "react-icons/hi2";
 
 const Header = () => {
   return (
@@ -51,6 +52,11 @@ const Header = () => {
             Boka Konsultation
           </button>
         </Link>
+      </div>
+
+      {/* Hamburger menu */}
+      <div className="lg:hidden bg-gray-400 bg-opacity-40 rounded-full py-4 px-6">
+        <HiBars3CenterLeft className="h-6 w-6 text-white" />
       </div>
     </header>
   );
