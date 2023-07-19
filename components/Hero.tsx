@@ -5,7 +5,7 @@ const Hero = () => {
   const handleScroll = () => {};
 
   return (
-    <div className="relative">
+    <div className="h-screen flex flex-col space-y-20 items-center justify-center text-center overflow-hidden">
       <video
         autoPlay
         muted
@@ -14,8 +14,8 @@ const Hero = () => {
       >
         <source src="/images/intro1.mp4" type="video/mp4" />
       </video>
-      <div className="flex xl:flex-row flex-col gap-5 max-w-[1440px] mx-auto relative z-10">
-        <div className="flex-1 pt-80 padding-x">
+      <div className="flex xl:flex-row flex-col gap-5 max-w-[1440px] mx-auto relative z-1">
+        <div className="flex-1 pt-36 px-16">
           <h1 className="2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold text-white">
             Solenergi för en ljusare framtid
           </h1>

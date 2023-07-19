@@ -1,15 +1,8 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import Products from "@/components/Products";
-
-const font = Montserrat({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["Arial", "sans-serif"],
-});
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Solenergiteamet",
@@ -23,9 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={font.className}>
-        <Header />
+      <body>
+        {/* <Header /> */}
         <main>{children}</main>
+        {/* <Footer /> */}
       </body>
     </html>
   );
