@@ -1,24 +1,36 @@
 "use client";
-
-import React from "react";
-import { Button, buttonVariants } from "./ui/button";
-import Link from "next/link";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   const handleScroll = () => {};
 
   return (
-    <div className="flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto">
-      <div className="flex-1 pt-36 padding-x">
-        <h1 className="2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold">
-          Solenergi för en ljusare framtid
-        </h1>
+    <div className="relative">
+      <video
+        autoPlay
+        muted
+        loop
+        className="fixed top-0 left-0 w-full h-screen object-cover z-[-1]"
+      >
+        <source src="/images/intro1.mp4" type="video/mp4" />
+      </video>
+      <div className="flex xl:flex-row flex-col gap-5 max-w-[1440px] mx-auto relative z-10">
+        <div className="flex-1 pt-80 padding-x">
+          <h1 className="2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold text-white">
+            Solenergi för en ljusare framtid
+          </h1>
 
-        <p className="text-[27px] text-black-100 font-light mt-5">
-          Fånga solen, sänk din elräkning och ditt klimatavtryck
-        </p>
+          <p className="text-[27px] text-white font-light mt-5">
+            Fånga solen, sänk din elräkning och ditt klimatavtryck
+          </p>
 
-        <Button handleClick={handleScroll}>Boka konsultation</Button>
+          <Button
+            handleClick={handleScroll}
+            className="px-8 rounded-full mt-10"
+          >
+            Boka konsultation
+          </Button>
+        </div>
       </div>
     </div>
   );

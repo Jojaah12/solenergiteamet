@@ -158,7 +158,9 @@ const Header = () => {
 
       {/* Right side */}
       <div className="hidden md:block lg:block">
-        <Button variant="default">Boka konsultation</Button>
+        <Button variant="default" className="px-8 rounded-full">
+          Boka konsultation
+        </Button>
       </div>
       {/* Hamburger menu */}
       <div></div>
