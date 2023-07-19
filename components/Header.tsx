@@ -65,16 +65,13 @@ const Header = () => {
     <header className="sticky top-0 p-6 px-20 flex items-start justify-evenly xl:items-center bg-opacity-0">
       {/* Left side */}
       <Link href="/">
-        <div className="flex items-center  justify-center">
-          <div className="flex-shrink-0 ">
-            <Image
-              src="/images/logo2.png"
-              alt="Logo"
-              width={200}
-              height={100}
-            />
-          </div>
-        </div>
+        <Image
+          src="/images/logo2.png"
+          alt="Logo"
+          width={200}
+          height={150}
+          className="object-contain"
+        />
       </Link>
 
       {/* Center */}
