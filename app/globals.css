@@ -8,6 +8,13 @@ body,
   height: 100%;
 }
 
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Add background color and other styles as needed */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

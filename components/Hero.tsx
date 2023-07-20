@@ -2,10 +2,8 @@
 import { Button } from "./ui/button";
 
 const Hero = () => {
-  const handleScroll = () => {};
-
   return (
-    <div className="h-screen flex flex-col space-y-20 items-center justify-center text-center overflow-hidden">
+    <div className="h-screen flex overflow-hidden">
       <video
         autoPlay
         muted
@@ -16,18 +14,21 @@ const Hero = () => {
       </video>
       <div className="flex xl:flex-row flex-col gap-5 max-w-[1440px] mx-auto relative z-1">
         <div className="flex-1 pt-36 px-16">
-          <h1 className="2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold text-white">
-            Solenergi för en ljusare framtid
+          <h1 className=" font-bold text-white text-5xl lg:text-6xl xl:text-6xl">
+            Solceller & Takbyte, snyggt och enkelt med Solenergi
+            Teamet
           </h1>
 
-          <p className="text-[27px] text-white font-light mt-5">
-            Fånga solen, sänk din elräkning och ditt klimatavtryck
+          <p className="text-[27px] text-white font-light mt-5 sm:text-[20px]">
+            Vi är en dedikerad helhetsleverantör av solceller,
+            laddstationer, och batterier för solel. Vi har all
+            personal anställd hos oss vilket gör att vi har kontroll
+            över hela processen, så att du kan känna dig trygg med att
+            köpa din lösning av oss. Vi älskar solen lite mer än
+            andra.
           </p>
 
-          <Button
-            handleClick={handleScroll}
-            className="px-8 rounded-full mt-10"
-          >
+          <Button className="px-8 rounded-full mt-10 hidden sm:block">
             Boka konsultation
           </Button>
         </div>

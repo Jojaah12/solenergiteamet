@@ -60,21 +60,36 @@ const data: {
 
 const Menu = () => {
   return (
-    <div className="">
+    <div className=" md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Solceller</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    ></a>
-                  </NavigationMenuLink>
-                </li>
+                <ListItem href="/docs" title="Introduction">
+                  Re-usable components built using Radix UI and
+                  Tailwind CSS.
+                </ListItem>
+                <ListItem
+                  href="/docs/installation"
+                  title="Installation"
+                >
+                  How to install dependencies and structure your app.
+                </ListItem>
+                <ListItem
+                  href="/docs/primitives/typography"
+                  title="Typography"
+                >
+                  Styles for headings, paragraphs, lists...etc
+                </ListItem>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Takbyte</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/docs" title="Introduction">
                   Re-usable components built using Radix UI and
                   Tailwind CSS.
@@ -111,15 +126,6 @@ const Menu = () => {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          <NavigationMenuItem>
-            <Link href="/docs" legacyBehavior passHref>
-              <NavigationMenuLink
-                className={navigationMenuTriggerStyle()}
-              >
-                Solcellsmanualen
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuTrigger>Om oss</NavigationMenuTrigger>
             <NavigationMenuContent>
