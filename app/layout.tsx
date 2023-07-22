@@ -21,8 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={urbanist.className}>
         <Header />
-        <Hero />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>

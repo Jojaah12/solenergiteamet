@@ -31,8 +31,6 @@ const Header = () => {
           Boka konsultation
         </Button>
       </div>
-      {/* Hamburger menu */}
-      <div></div>
     </div>
   );
 };
