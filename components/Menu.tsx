@@ -60,7 +60,7 @@ const data: {
 
 const Menu = () => {
   return (
-    <div className=" md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+    <div className=" hidden lg:block  md:ml-auto md:mr-auto flex-wrap items-center text-base justify-center">
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
