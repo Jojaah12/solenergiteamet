@@ -23,7 +23,7 @@ const data: {
 }[] = [
   {
     title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
+    href: "/om-oss",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
