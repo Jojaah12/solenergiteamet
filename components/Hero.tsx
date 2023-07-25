@@ -12,25 +12,36 @@ const Hero = () => {
       >
         <source src="/images/intro1.mp4" type="video/mp4" />
       </video>
-      <div className="flex xl:flex-row flex-col gap-5 max-w-[1440px] mx-auto relative z-1">
-        <div className="flex-1 pt-36 px-16">
-          <h1 className=" font-bold text-white text-5xl lg:text-6xl xl:text-6xl">
-            Solceller & Takbyte, snyggt och enkelt med Solenergi
-            Teamet
+      <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className="title-font sm:text-4xl mb-4 font-bold text-white">
+            Solceller & Takbyte, snyggt och enkelt
+            <br className="hidden lg:inline-block" />
+            med Solenergi Teamet
           </h1>
-
-          <p className="text-[27px] text-white font-light mt-5 sm:text-[20px]">
-            Vi är en dedikerad helhetsleverantör av solceller,
-            laddstationer, och batterier för solel. Vi har all
-            personal anställd hos oss vilket gör att vi har kontroll
-            över hela processen, så att du kan känna dig trygg med att
-            köpa din lösning av oss. Vi älskar solen lite mer än
-            andra.
+          <p className="mb-8 leading-relaxed font-medium text-white">
+            Vi är specialister på solcellslösningar och erbjuder en
+            helhetslösning för solel.
+            <br className="hidden lg:inline-block" />
+            Vår engagerade personal arbetar internt för att
+            säkerställa kontroll över hela processen.
+            <br className="hidden lg:inline-block" />
+            Du kan känna dig trygg med att köpa din lösning av oss.
+            <br className="hidden lg:inline-block" />
+            Vi brinner för solenergi och strävar alltid efter bästa
+            möjliga resultat.
+            <br className="hidden lg:inline-block" />
+            Dessutom erbjuder vi takbyte för optimala förutsättningar
+            för solcellsanläggningar på ditt tak.
           </p>
-
-          <Button className="px-8 rounded-full mt-10 hidden sm:block">
-            Boka konsultation
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              variant="default"
+              className="inline-flex items-center border-0 py-1 px-10 mt-4 md:mt-0 rounded-full"
+            >
+              Boka konsultation
+            </Button>
+          </div>
         </div>
       </div>
     </div>
