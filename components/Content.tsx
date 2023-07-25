@@ -25,8 +25,8 @@ const Content = () => {
               <Image
                 src="/images/content-1.jpg"
                 alt="content"
-                width={96}
-                height={48}
+                width={200}
+                height={150}
                 className="rounded w-full object-contain mb-6"
               />
               <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">

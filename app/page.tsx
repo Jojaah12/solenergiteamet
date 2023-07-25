@@ -6,8 +6,6 @@ const HomePage = () => {
     <main>
       <Hero />
       <Content />
-      <Content />
-      <Content />
     </main>
   );
 };
