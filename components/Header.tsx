@@ -7,7 +7,7 @@ import Menu from "./Menu";
 
 const Header = () => {
   return (
-    <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center sticky-header">
+    <header className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center sticky-header">
       {/* Left side */}
       <Link href="/" className="flex items-center mb-4 md:mb-0">
         <Image
@@ -31,7 +31,7 @@ const Header = () => {
           Boka konsultation
         </Button>
       </div>
-    </div>
+    </header>
   );
 };
 export default Header;
