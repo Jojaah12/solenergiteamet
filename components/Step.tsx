@@ -1,16 +1,31 @@
+import Image from "next/image";
 import React from "react";
 
 const Step = () => {
   return (
     <section className="text-gray-600 bg-white body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
+        <div className="flex flex-wrap w-full mb-20">
+          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
+              Så funkar det!
+            </h1>
+            <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
+          </div>
+          <p className="lg:w-1/2 w-full leading-relaxed text-black">
+            Vi förstår att solceller kan vara överväldigande. Därför
+            har vi utformat en steg-för-steg-guide som visar hur en
+            solcellsinstallation med en komplett helhetsleverantör
+            fungerar. Låt oss guida er genom processen!
+          </p>
+        </div>
         <div className="flex flex-wrap w-full">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -25,12 +40,12 @@ const Step = () => {
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  STEP 1
+                  Hitta din lösning
                 </h2>
                 <p className="leading-relaxed">
-                  VHS cornhole pop-up, try-hard 8-bit iceland
-                  helvetica. Kinfolk bespoke try-hard cliche palo
-                  santo offal.
+                  Använd vår solcellskalkylator för att se ditt
+                  potentiella sparande eller fyll i formuläret för att
+                  kontakta våra experter.
                 </p>
               </div>
             </div>
@@ -38,7 +53,7 @@ const Step = () => {
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -53,11 +68,11 @@ const Step = () => {
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  STEP 2
+                  Personlig rådgivning
                 </h2>
                 <p className="leading-relaxed">
-                  Vice migas literally kitsch +1 pok pok. Truffaut hot
-                  chicken slow-carb health goth, vape typewriter.
+                  Fyll i ett intresseformulär så ringer vi upp dig och
+                  bokar in ett möte.
                 </p>
               </div>
             </div>
@@ -65,7 +80,7 @@ const Step = () => {
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -81,11 +96,11 @@ const Step = () => {
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  STEP 3
+                  Smidig installation
                 </h2>
                 <p className="leading-relaxed">
-                  Coloring book nar whal glossier master cleanse
-                  umami. Salvia +1 master cleanse blog taiyaki.
+                  Vi monterar, besiktigar och lämnar sedan över
+                  anläggningen till dig.
                 </p>
               </div>
             </div>
@@ -93,7 +108,7 @@ const Step = () => {
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
               </div>
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -109,7 +124,7 @@ const Step = () => {
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  STEP 4
+                  Långsiktig support
                 </h2>
                 <p className="leading-relaxed">
                   VHS cornhole pop-up, try-hard 8-bit iceland
@@ -119,7 +134,7 @@ const Step = () => {
               </div>
             </div>
             <div className="flex relative">
-              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
+              <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
                 <svg
                   fill="none"
                   stroke="currentColor"
@@ -135,11 +150,11 @@ const Step = () => {
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                  FINISH
+                  Slutligen
                 </h2>
                 <p className="leading-relaxed">
-                  Pitchfork ugh tattooed scenester echo park gastropub
-                  whatever cold-pressed retro.
+                  Vår support finns här för dig under hela
+                  anläggningens livstid
                 </p>
               </div>
             </div>
