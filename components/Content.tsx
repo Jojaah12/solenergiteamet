@@ -36,9 +36,10 @@ const Content = () => {
                 <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
                   Villa
                 </h2>
-                <p className="leading-relaxed text-base">
-                  Funderar du på att montera solpaneler på din villa?
-                  Vi är här för att hjälpa dig!
+                <p className="leading-relaxed text-base line-clamp-3">
+                  Optimera er villa med solenergi! Minska kostnader
+                  och bli mer hållbara. Kontakta oss nu för
+                  skräddarsydda solpanelslösningar.
                 </p>
               </div>
             </Link>
@@ -60,38 +61,37 @@ const Content = () => {
                 <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
                   Företag
                 </h2>
-                <p className="leading-relaxed text-base">
-                  Funderar ditt företag på solpaneler? Vi är experter
-                  på solenergilösningar för företag. Minska
-                  energikostnader och bli mer miljövänliga med våra
-                  skräddarsydda solpanelssystem. Kontakta oss för en
-                  konsultation idag!
+                <p className="leading-relaxed text-base line-clamp-3">
+                  Optimera er företag med solenergi! Minska kostnader
+                  och bli mer hållbara. Kontakta oss nu för
+                  skräddarsydda solpanelslösningar.
                 </p>
               </div>
             </Link>
           </div>
           <div className="xl:w-1/4 md:w-1/2 p-4">
-            <Link href="/bostadsrättsföreningar"></Link>
-            <div className="bg-gray-100 p-6 rounded-lg">
-              <Image
-                src="/images/content-4.jpg"
-                alt="content"
-                width={200}
-                height={150}
-                className="rounded w-full object-contain mb-6"
-              />
-              <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
-                SUBTITLE
-              </h3>
-              <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
-                Bostadsrättsföreningar
-              </h2>
-              <p className="leading-relaxed text-base">
-                Optimera er bostadsrättsförening med solenergi! Minska
-                kostnader och bli mer hållbara. Kontakta oss nu för
-                skräddarsydda solpanelslösningar.
-              </p>
-            </div>
+            <Link href="/bostadsrättsföreningar">
+              <div className="bg-gray-100 p-6 rounded-lg">
+                <Image
+                  src="/images/content-4.jpg"
+                  alt="content"
+                  width={200}
+                  height={150}
+                  className="rounded w-full object-contain mb-6"
+                />
+                <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
+                  SUBTITLE
+                </h3>
+                <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
+                  Bostadsrättsföreningar
+                </h2>
+                <p className="leading-relaxed text-base line-clamp-3">
+                  Optimera er bostadsrättsförening med solenergi!
+                  Minska kostnader och bli mer hållbara. Kontakta oss
+                  nu för skräddarsydda solpanelslösningar.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
