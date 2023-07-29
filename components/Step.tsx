@@ -29,7 +29,7 @@ const Step = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   className="w-5 h-5"
@@ -57,7 +57,7 @@ const Step = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   className="w-5 h-5"
@@ -84,7 +84,7 @@ const Step = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   className="w-5 h-5"
@@ -112,7 +112,7 @@ const Step = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   className="w-5 h-5"
@@ -138,7 +138,7 @@ const Step = () => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
                   className="w-5 h-5"
