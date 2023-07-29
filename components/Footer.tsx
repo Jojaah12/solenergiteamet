@@ -25,24 +25,36 @@ const Footer = () => (
           </h2>
           <nav className="list-none mb-10">
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 First Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Second Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Third Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Fourth Link
-              </a>
+              </Link>
             </li>
           </nav>
         </div>
@@ -52,24 +64,36 @@ const Footer = () => (
           </h2>
           <nav className="list-none mb-10">
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 First Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Second Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Third Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Fourth Link
-              </a>
+              </Link>
             </li>
           </nav>
         </div>
@@ -79,51 +103,36 @@ const Footer = () => (
           </h2>
           <nav className="list-none mb-10">
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 First Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Second Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Third Link
-              </a>
+              </Link>
             </li>
             <li>
-              <a className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Fourth Link
-              </a>
-            </li>
-          </nav>
-        </div>
-        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
-            CATEGORIES
-          </h2>
-          <nav className="list-none mb-10">
-            <li>
-              <a className="text-white hover:text-gray-800">
-                First Link
-              </a>
-            </li>
-            <li>
-              <a className="text-white hover:text-gray-800">
-                Second Link
-              </a>
-            </li>
-            <li>
-              <a className="text-white hover:text-gray-800">
-                Third Link
-              </a>
-            </li>
-            <li>
-              <a className="text-white hover:text-gray-800">
-                Fourth Link
-              </a>
+              </Link>
             </li>
           </nav>
         </div>
@@ -138,7 +147,7 @@ const Footer = () => (
           <a className="text-white">
             <svg
               fill="currentColor"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               className="w-5 h-5"
@@ -150,7 +159,7 @@ const Footer = () => (
           <a className="ml-3 text-white">
             <svg
               fill="currentColor"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               className="w-5 h-5"
@@ -163,7 +172,7 @@ const Footer = () => (
             <svg
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               className="w-5 h-5"
@@ -184,7 +193,7 @@ const Footer = () => (
             <svg
               fill="currentColor"
               stroke="currentColor"
-              stroke-linecap="round"
+              strokeLinecap="round"
               stroke-linejoin="round"
               stroke-width="0"
               className="w-5 h-5"
