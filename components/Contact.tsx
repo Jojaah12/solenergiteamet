@@ -23,8 +23,8 @@ const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  id="zip"
-                  name="zip"
+                  id="firstName"
+                  name="firstName"
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -35,9 +35,9 @@ const Contact = () => {
                   Efternamn
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
+                  type="text"
+                  id="lastName"
+                  name="lastName"
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -48,9 +48,10 @@ const Contact = () => {
                   E-post
                 </label>
                 <input
-                  type="text"
-                  id="zip"
-                  name="zip"
+                  type="email"
+                  required
+                  id="email"
+                  name="email"
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -62,9 +63,9 @@ const Contact = () => {
                 </label>
                 <input
                   placeholder="+4673 123 12 31"
-                  type="email"
-                  id="email"
-                  name="email"
+                  type="text"
+                  id="number"
+                  name="number"
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
@@ -102,9 +103,9 @@ const Contact = () => {
                   Ort
                 </label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
+                  type="text"
+                  id="ort"
+                  name="ort"
                   className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
