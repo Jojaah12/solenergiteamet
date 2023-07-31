@@ -10,7 +10,7 @@ const HomePage = () => {
       <Hero />
       <Content />
       <Step />
-      <Testimonials />
+      {/*       <Testimonials /> */}
       <Contact />
     </main>
   );
