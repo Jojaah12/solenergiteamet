@@ -3,7 +3,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
 
 const urbanist = Inter({ subsets: ["latin"] });
 
