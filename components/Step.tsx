@@ -44,7 +44,10 @@ const Step = () => {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
               </div>
-              <div className="flex-grow pl-4">
+              <div
+                className="flex-grow pl-4"
+                data-aos="zoom-in-right"
+              >
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Hitta din lösning
                 </h2>
@@ -72,7 +75,10 @@ const Step = () => {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
               </div>
-              <div className="flex-grow pl-4">
+              <div
+                className="flex-grow pl-4"
+                data-aos="zoom-in-right"
+              >
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Personlig rådgivning
                 </h2>
@@ -100,7 +106,10 @@ const Step = () => {
                   <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
                 </svg>
               </div>
-              <div className="flex-grow pl-4">
+              <div
+                className="flex-grow pl-4"
+                data-aos="zoom-in-right"
+              >
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Smidig installation
                 </h2>
@@ -128,7 +137,10 @@ const Step = () => {
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </div>
-              <div className="flex-grow pl-4">
+              <div
+                className="flex-grow pl-4"
+                data-aos="zoom-in-right"
+              >
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Långsiktig support
                 </h2>
@@ -154,7 +166,10 @@ const Step = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
               </div>
-              <div className="flex-grow pl-4">
+              <div
+                className="flex-grow pl-4"
+                data-aos="zoom-in-right"
+              >
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Slutligen
                 </h2>

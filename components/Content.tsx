@@ -34,6 +34,7 @@ const Content = () => {
                     width={200}
                     height={150}
                     className="rounded w-full object-contain mb-6"
+                    data-aos="flip-left"
                   />
                   <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
                     SUBTITLE
@@ -59,6 +60,7 @@ const Content = () => {
                     width={200}
                     height={150}
                     className="rounded w-full object-contain mb-6"
+                    data-aos="flip-left"
                   />
                   <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
                     SUBTITLE
@@ -83,6 +85,7 @@ const Content = () => {
                     width={200}
                     height={150}
                     className="rounded w-full object-contain mb-6"
+                    data-aos="flip-left"
                   />
                   <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
                     SUBTITLE
@@ -107,6 +110,7 @@ const Content = () => {
                     width={200}
                     height={150}
                     className="rounded w-full object-contain mb-6"
+                    data-aos="flip-left"
                   />
                   <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
                     SUBTITLE
@@ -131,6 +135,7 @@ const Content = () => {
                     width={200}
                     height={150}
                     className="rounded w-full object-contain mb-6"
+                    data-aos="flip-left"
                   />
                   <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
                     SUBTITLE
@@ -156,6 +161,7 @@ const Content = () => {
                     width={200}
                     height={150}
                     className="rounded w-full object-contain mb-6"
+                    data-aos="flip-left"
                   />
                   <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
                     SUBTITLE
@@ -180,6 +186,7 @@ const Content = () => {
                     width={200}
                     height={150}
                     className="rounded w-full object-contain mb-6"
+                    data-aos="flip-left"
                   />
                   <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
                     SUBTITLE
@@ -204,6 +211,7 @@ const Content = () => {
                     width={200}
                     height={150}
                     className="rounded w-full object-contain mb-6"
+                    data-aos="flip-left"
                   />
                   <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
                     SUBTITLE
