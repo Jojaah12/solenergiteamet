@@ -77,7 +77,7 @@ const Content = () => {
               </Link>
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
-              <Link href="/företag">
+              <Link href="/takbyte">
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <Image
                     src="/images/takbyte1.jpg"
