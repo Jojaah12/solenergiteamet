@@ -1,6 +1,17 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 const Contact = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [postnummer, setPostnummer] = useState("");
+  const [ort, setOrt] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <section className="text-gray-600 bg-gray-300 body-font relative">
       <div className="container px-5 py-24 mx-auto">

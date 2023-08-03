@@ -5,7 +5,10 @@ const Step = () => {
   return (
     <section className="text-gray-600 bg-white body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
-        <div className="flex flex-wrap w-full mb-20">
+        <div
+          className="flex flex-wrap w-full mb-20"
+          data-aos="fade-up"
+        >
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
               Så funkar det!
@@ -20,7 +23,10 @@ const Step = () => {
           </p>
         </div>
         <div className="flex flex-wrap w-full">
-          <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+          <div
+            className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6"
+            data-aos="fade-up"
+          >
             <div className="flex relative pb-12">
               <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
                 <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>

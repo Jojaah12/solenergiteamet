@@ -12,7 +12,7 @@ const HomePage = () => {
   useEffect(() => {
     Aos.init({
       duration: 800,
-      once: true,
+      once: false,
     });
   }, []);
   return (
