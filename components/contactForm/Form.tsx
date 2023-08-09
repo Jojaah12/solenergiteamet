@@ -1,5 +1,5 @@
 "use client";
-import { validate } from "@/utils/validate";
+import { validate } from "@/lib/validate";
 import Link from "next/link";
 import { useState } from "react";
 
