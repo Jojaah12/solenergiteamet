@@ -1,34 +1,20 @@
 "use client";
-import { validate } from "@/lib/validate";
 import Link from "next/link";
 import { useState } from "react";
-import TextArea from "./TextArea";
 
 interface IValues {
   firstName: string;
-  lastName: string;
-  email: string;
-  phonenumber: string;
-  address: string;
-  postnummer: string;
-  city: string;
-  message: string;
 }
 
-interface IErrors extends Partial<IValues> {}
-
-const Form = () => {
-  const [values, setValues] = useState<IValues>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phonenumber: "",
-    address: "",
-    postnummer: "",
-    city: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState<IErrors>({});
+const Contact = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [address, setAddress] = useState("");
+  const [postnummer, setPostnummer] = useState("");
+  const [city, setCity] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <section className="text-gray-600 bg-gray-300 body-font relative">
@@ -139,18 +125,18 @@ const Form = () => {
                 />
               </div>
             </div>
-            <TextArea
-              value={values.message}
-              onChange={(e) =>
-                setValues({ ...values, message: e.target.value })
-              }
-              id="message"
-              name="message"
-              label="Meddelande"
-              placeholder="Ditt meddelande här..."
-              error={!!errors.message}
-              errorMessage={errors.message || ""}
-            />
+            <div className="p-2 w-full">
+              <div className="relative">
+                <label className="leading-7 text-sm text-gray-600">
+                  Meddelande
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                ></textarea>
+              </div>
+            </div>
             <div className="p-2 w-full">
               <button
                 type="button"
@@ -194,4 +180,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Contact;

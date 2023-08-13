@@ -4,16 +4,16 @@ export const validate = ({
   email,
   phoneNumber,
   address,
-  zip,
+  zipcode,
   city,
   message,
 }: {
   firstName: string;
   lastName: string;
-  email: string;
   phoneNumber: string;
   address: string;
-  zip: string;
+  zipcode: string;
+  email: string;
   city: string;
   message: string;
 }) => {
@@ -23,56 +23,39 @@ export const validate = ({
     email?: string;
     phoneNumber?: string;
     address?: string;
-    zip?: string;
+    zipcode?: string;
     city?: string;
     message?: string;
   } = {};
 
-  // Validate firstName field
-  if (!firstName?.trim()) {
+  if (!firstName || firstName.trim() === "") {
     errors.firstName = "First Name is required";
   }
-
-  // Validate lastName field
-  if (!lastName?.trim()) {
+  if (!lastName || lastName.trim() === "") {
     errors.lastName = "Last Name is required";
   }
-
-  // Validate email field
-  if (!email?.trim()) {
+  if (!email || email.trim() === "") {
     errors.email = "Email is required";
   } else if (
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)
   ) {
     errors.email = "Invalid email address";
   }
-
-  // Validate phoneNumber field
-  if (!phoneNumber?.trim()) {
+  if (!phoneNumber || phoneNumber.trim() === "") {
     errors.phoneNumber = "Phone Number is required";
-  } else if (!/^\d{10}$/i.test(phoneNumber)) {
-    errors.phoneNumber = "Invalid phone number";
   }
-
-  // Validate address field
-  if (!address?.trim()) {
+  if (!address || address.trim() === "") {
     errors.address = "Address is required";
   }
-
-  // Validate zip field
-  if (!zip?.trim()) {
-    errors.zip = "ZIP Code is required";
-  } else if (!/^\d{5}$/.test(zip)) {
-    errors.zip = "ZIP Code must be exactly 5 digits";
+  if (!zipcode || zipcode.trim() === "") {
+    errors.zipcode = "Zip Code is required";
+  } else if (!/^\d{5}$/.test(zipcode)) {
+    errors.zipcode = "Invalid Zip Code";
   }
-
-  // Validate city field
-  if (!city?.trim()) {
+  if (!city || city.trim() === "") {
     errors.city = "City is required";
   }
-
-  // Validate message field
-  if (!message?.trim()) {
+  if (!message || message.trim() === "") {
     errors.message = "Message is required";
   }
 

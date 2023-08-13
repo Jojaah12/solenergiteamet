@@ -12,9 +12,10 @@ const Footer = () => (
           <Image
             src="/images/logo2.png"
             alt="Logo"
-            width={200}
+            width={150}
             height={150}
-            className="object-contain "
+            priority
+            className="object-contain w-auto h-auto "
           />
         </Link>
       </div>
