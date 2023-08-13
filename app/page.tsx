@@ -1,5 +1,5 @@
 "use client";
-import Form from "@/components/contactForm/Form";
+import Contact from "@/components/contactForm/Contact";
 import Content from "@/components/Content";
 import Hero from "@/components/Hero";
 import Step from "@/components/Step";
@@ -21,7 +21,7 @@ const HomePage = () => {
       <Content />
       <Step />
       {/*       <Testimonials /> */}
-      <Form />
+      <Contact />
     </main>
   );
 };
