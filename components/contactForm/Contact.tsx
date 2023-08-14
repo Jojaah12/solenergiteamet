@@ -1,21 +1,8 @@
-"use client";
 import Link from "next/link";
-import { useState } from "react";
-
-interface IValues {
-  firstName: string;
-}
+import Input from "./Input";
+import TextArea from "./TextArea";
 
 const Contact = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phonenumber, setPhonenumber] = useState("");
-  const [address, setAddress] = useState("");
-  const [postnummer, setPostnummer] = useState("");
-  const [city, setCity] = useState("");
-  const [message, setMessage] = useState("");
-
   return (
     <section className="text-gray-600 bg-gray-300 body-font relative">
       <div className="container px-5 py-24 mx-auto">
@@ -31,112 +18,28 @@ const Contact = () => {
 
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
           <div className="flex flex-wrap -m-2">
-            <div className="p-2 w-full sm:w-1/2">
-              <div className="relative">
-                <label className="leading-7 text-sm text-gray-600">
-                  Förnamn
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div className="p-2 w-full sm:w-1/2">
-              <div className="relative">
-                <label className="leading-7 text-sm text-gray-600">
-                  Efternamn
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div className="p-2 w-full sm:w-1/2">
-              <div className="relative">
-                <label className="leading-7 text-sm text-gray-600">
-                  E-post
-                </label>
-                <input
-                  type="email"
-                  required
-                  id="email"
-                  name="email"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div className="p-2 w-full sm:w-1/2">
-              <div className="relative">
-                <label className="leading-7 text-sm text-gray-600">
-                  Telefonnummer
-                </label>
-                <input
-                  placeholder="+4673 123 12 31"
-                  type="text"
-                  id="number"
-                  name="number"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
+            <Input id="firstName" label="Förnamn" placeholder="" />
+            <Input id="lastName" label="Efternamn" placeholder=" " />
+            <Input id="email" label="E-post" placeholder="" />
+            <Input
+              id="number"
+              label="Telefonnummer"
+              placeholder="+4673 00 00 000"
+            />
+            <Input
+              id="name"
+              label="Adress"
+              className="lg:w-full"
+              placeholder=""
+            />
+            <Input id="zip" label="Postnummer" placeholder="" />
+            <Input id="ort" label="Ort" placeholder="" />
+            <TextArea
+              id="message"
+              label="Meddelande"
+              placeholder="Ditt meddelande..."
+            />
 
-            <div className="p-2 w-full">
-              <div className="relative">
-                <label className="leading-7 text-sm text-gray-600">
-                  Adress
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div className="p-2 w-full sm:w-1/2">
-              <div className="relative">
-                <label className="leading-7 text-sm text-gray-600">
-                  Postnummer
-                </label>
-                <input
-                  type="text"
-                  id="zip"
-                  name="zip"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div className="p-2 w-full sm:w-1/2">
-              <div className="relative">
-                <label className="leading-7 text-sm text-gray-600">
-                  Ort
-                </label>
-                <input
-                  type="text"
-                  id="ort"
-                  name="ort"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div>
-            <div className="p-2 w-full">
-              <div className="relative">
-                <label className="leading-7 text-sm text-gray-600">
-                  Meddelande
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                ></textarea>
-              </div>
-            </div>
             <div className="p-2 w-full">
               <button
                 type="button"
