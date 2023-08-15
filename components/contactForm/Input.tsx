@@ -2,10 +2,22 @@ interface InputProps {
   id: string;
   label: string;
   placeholder: string;
+  value: string; // New prop for input value
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
+  errorMessage: string;
   className?: string;
 }
 
-const Input = ({ id, label, placeholder, className }: InputProps) => {
+const Input: React.FC<InputProps> = ({
+  id,
+  label,
+  placeholder,
+  value,
+  onChange,
+  error,
+  className,
+}) => {
   return (
     <div
       className={`p-2 w-full sm:w-1/2 ${className ? className : ""}`}
@@ -19,8 +31,15 @@ const Input = ({ id, label, placeholder, className }: InputProps) => {
           id={id}
           name={id}
           placeholder={placeholder}
-          className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          value={value} //
+          onChange={onChange}
+          className={`w-full bg-gray-100 bg-opacity-50 rounded border ${
+            error ? "border-red-500" : "border-gray-300"
+          } focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
         />
+        {error && (
+          <p className="text-xs text-red-500 mt-1">{error}</p>
+        )}
       </div>
     </div>
   );
