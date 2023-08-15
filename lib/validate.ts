@@ -29,20 +29,20 @@ export const validate = ({
   } = {};
 
   if (!firstName || firstName.trim() === "") {
-    errors.firstName = "First Name is required";
+    errors.firstName = "Du måste fylla i detta fält.";
   }
   if (!lastName || lastName.trim() === "") {
-    errors.lastName = "Last Name is required";
+    errors.lastName = "Du måste fylla i detta fält.";
   }
   if (!email || email.trim() === "") {
-    errors.email = "Email is required";
+    errors.email = "Du måste fylla i detta fält.";
   } else if (
     !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)
   ) {
     errors.email = "Invalid email address";
   }
   if (!phoneNumber || phoneNumber.trim() === "") {
-    errors.phoneNumber = "Phone Number is required";
+    errors.phoneNumber = "Du måste fylla i detta fält.";
   }
   if (!address || address.trim() === "") {
     errors.address = "Address is required";
@@ -53,10 +53,10 @@ export const validate = ({
     errors.zipcode = "Invalid Zip Code";
   }
   if (!city || city.trim() === "") {
-    errors.city = "City is required";
+    errors.city = "Du måste fylla i detta fält.";
   }
   if (!message || message.trim() === "") {
-    errors.message = "Message is required";
+    errors.message = "Du måste fylla i detta fält.";
   }
 
   return errors;
