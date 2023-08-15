@@ -31,7 +31,7 @@ export default async function handler(
 
     const recipients: string[] = [
       "david.aljojah@gmail.com",
-      "mohammed_jojah@hotmail.com",
+      "samir@solenergiteamet.se",
     ];
 
     const msg = `

@@ -62,7 +62,7 @@ const Contact = () => {
     setErrors({});
     setLoading(true);
     axios
-      .post("@/api/mail", {
+      .post("/api/mail", {
         firstName: formValues.firstName,
         lastName: formValues.lastName,
         email: formValues.email,
