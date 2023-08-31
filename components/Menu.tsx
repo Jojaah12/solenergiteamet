@@ -68,19 +68,12 @@ const Menu = () => {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and
-                  Tailwind CSS.
+                  Re-usable components built using Radix UI and Tailwind CSS.
                 </ListItem>
-                <ListItem
-                  href="/docs/installation"
-                  title="Installation"
-                >
+                <ListItem href="/docs/installation" title="Installation">
                   How to install dependencies and structure your app.
                 </ListItem>
-                <ListItem
-                  href="/docs/primitives/typography"
-                  title="Typography"
-                >
+                <ListItem href="/docs/primitives/typography" title="Typography">
                   Styles for headings, paragraphs, lists...etc
                 </ListItem>
               </ul>
@@ -90,20 +83,14 @@ const Menu = () => {
             <NavigationMenuTrigger>Takbyte</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and
-                  Tailwind CSS.
+                <ListItem href="/takbyte" title="Introduction">
+                  Behov av takbyte eller takreparation tillhör de vanligaste
+                  anledningarna till att man börjar fundera på solceller.
                 </ListItem>
-                <ListItem
-                  href="/docs/installation"
-                  title="Installation"
-                >
+                <ListItem href="/docs/installation" title="Installation">
                   How to install dependencies and structure your app.
                 </ListItem>
-                <ListItem
-                  href="/docs/primitives/typography"
-                  title="Typography"
-                >
+                <ListItem href="/docs/primitives/typography" title="Typography">
                   Styles for headings, paragraphs, lists...etc
                 </ListItem>
               </ul>
@@ -114,19 +101,12 @@ const Menu = () => {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and
-                  Tailwind CSS.
+                  Re-usable components built using Radix UI and Tailwind CSS.
                 </ListItem>
-                <ListItem
-                  href="/docs/installation"
-                  title="Installation"
-                >
+                <ListItem href="/docs/installation" title="Installation">
                   How to install dependencies and structure your app.
                 </ListItem>
-                <ListItem
-                  href="/docs/primitives/typography"
-                  title="Typography"
-                >
+                <ListItem href="/docs/primitives/typography" title="Typography">
                   Styles for headings, paragraphs, lists...etc
                 </ListItem>
               </ul>
@@ -154,9 +134,7 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">
-            {title}
-          </div>
+          <div className="text-sm font-medium leading-none">{title}</div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
