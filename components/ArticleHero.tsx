@@ -2,14 +2,17 @@ import Image from "next/image";
 
 const ArticleHero = () => {
   return (
-    <div className="flex overflow-hidden">
-      <Image
-        className="fixed top-0 left-0 w-full h-screen object-fit z-[-1] opacity-90"
-        src="/images/takbyte1.jpg"
-        alt="Takbyte"
-        width={100}
-        height={50}
-      />
+    <div className="flex">
+      <div className="h-screen fixed top-0 left-0 w-full object-fit z-[-1]">
+        <Image
+          className="opacity-16"
+          src="/images/takbyte3.jpg"
+          alt="Takbyte"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="bottom right"
+        />
+      </div>
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div
           className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start 
