@@ -1,6 +1,5 @@
 import ArticleBody from "@/components/ArticleBody";
 import ArticleHero from "@/components/ArticleHero";
-import React from "react";
 
 const Takbyte = () => {
   return (
