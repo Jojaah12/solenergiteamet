@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { takbyteData } from "./data";
+import { takbyteData } from "../../lib/data";
 
 const Takbyte = () => {
   return (
@@ -43,13 +43,13 @@ const Takbyte = () => {
               <div className="flex flex-wrap w-full " data-aos="fade-up">
                 <div className="w-full mb-6 ">
                   <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
-                    {article.bodyTitle}
+                    {article.blockTitle}
                   </h1>
                   <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
                 </div>
                 <div className="flex-column">
                   <p className="w-full leading-relaxed text-black mb-4">
-                    {article.body}
+                    {article.blockText}
                   </p>
                 </div>
               </div>
@@ -57,7 +57,7 @@ const Takbyte = () => {
             <div className="container px-5 pt-16 mx-auto lg:col-start-2 lg:col-end-3 flex justify-center items-center">
               <Image
                 className=""
-                src={article.bodyImage}
+                src={article.blockImage}
                 alt="Takbyte"
                 layout="responsive"
                 width={400} // Adjust this width to your preferred maximum width
