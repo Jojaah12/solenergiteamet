@@ -38,57 +38,64 @@ const Takbyte = () => {
           </div>
         </div>
       </div>
-      {takbyteData.map((article) => (
+      {takbyteData.map((article, index) => (
         <div
           key={article.id}
-          className="text-gray-600 bg-white body-font grid grid-cols-1 lg:grid-cols-2 pt-24 "
+          className={`grid grid-cols-1 lg:grid-cols-2 text-gray-600 bg-white body-font ${
+            index % 2 === 0 ? "lg:flex-row-reverse" : "" // Reverse the order for even-indexed articles on larger screens
+          }`}
         >
-          <GridContainer>
-            <div className="w-full p-16 ">
-              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
-                {article.blockTitle}
-              </h1>
-              <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
-
-              <div className="flex-column mt-6">
-                <p className="w-full leading-relaxed text-black mb-4">
-                  {article.blockText}
-                </p>
-              </div>
-            </div>
-          </GridContainer>
-          <GridContainer>
-            <Image
-              className=""
-              src={article.blockImage}
-              alt="Takbyte"
-              layout="fill"
-              objectFit="cover"
-            />
-          </GridContainer>
-          <GridContainer>
-            <Image
-              className=""
-              src={article.blockImage}
-              alt="Takbyte"
-              layout="fill"
-              objectFit="cover"
-            />
-          </GridContainer>
-          <GridContainer>
-            <div className="w-full p-16 ">
-              <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
-                {article.blockTitle}
-              </h1>
-              <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
-
-              <div className="flex-column mt-6">
-                <p className="w-full leading-relaxed text-black mb-4">
-                  {article.blockText}
-                </p>
-              </div>
-            </div>
-          </GridContainer>
+          {index % 2 === 0 ? (
+            <>
+              <GridContainer>
+                <Image
+                  className=""
+                  src={article.blockImage}
+                  alt="Takbyte"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </GridContainer>
+              <GridContainer>
+                <div className="w-full lg:p-16 p-6">
+                  <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
+                    {article.blockTitle}
+                  </h1>
+                  <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
+                  <div className="flex-column mt-6">
+                    <p className="w-full leading-relaxed text-black mb-4">
+                      {article.blockText}
+                    </p>
+                  </div>
+                </div>
+              </GridContainer>
+            </>
+          ) : (
+            <>
+              <GridContainer>
+                <div className="w-full lg:p-16 p-6">
+                  <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
+                    {article.blockTitle}
+                  </h1>
+                  <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
+                  <div className="flex-column mt-6">
+                    <p className="w-full leading-relaxed text-black mb-4">
+                      {article.blockText}
+                    </p>
+                  </div>
+                </div>
+              </GridContainer>
+              <GridContainer>
+                <Image
+                  className=""
+                  src={article.blockImage}
+                  alt="Takbyte"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </GridContainer>
+            </>
+          )}
         </div>
       ))}
     </>

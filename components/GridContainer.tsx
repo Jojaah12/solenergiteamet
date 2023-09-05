@@ -5,7 +5,7 @@ interface GridContainerProps {
 }
 function GridContainer({ children }: GridContainerProps) {
   return (
-    <div className=" flex flex-wrap overflow-hidden w-fill h-[500px] relative">
+    <div className="flex flex-wrap overflow-hidden w-fill h-[500px] relative items-center ">
       {children}
     </div>
   );
