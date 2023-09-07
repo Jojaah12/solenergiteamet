@@ -7,10 +7,7 @@ const Content = () => {
     <>
       <section className="text-gray-600 bg-white body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div
-            className="flex flex-wrap w-full mb-20"
-            data-aos="fade-up"
-          >
+          <div className="flex flex-wrap w-full mb-20" data-aos="fade-up">
             <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
               <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
                 Ta reda på mer om våra solcellslösningar
@@ -18,15 +15,15 @@ const Content = () => {
               <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
             </div>
             <p className="lg:w-1/2 w-full leading-relaxed text-black">
-              Vi är experter på solcellsinstallationer & Takbyte för
-              olika typer av fastigheter, såsom villor, företag och
-              bostadsrättsföreningar. Välj det område som intresserar
-              dig och upptäck dess unika fördelar.
+              Vi är experter på solcellsinstallationer & Takbyte för olika typer
+              av fastigheter, såsom villor, företag och bostadsrättsföreningar.
+              Välj det område som intresserar dig och upptäck dess unika
+              fördelar.
             </p>
           </div>
           <div className="flex flex-wrap -m-4">
             <div className="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
-              <Link href="/villa">
+              <Link href="/">
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <Image
                     src="/images/content-1.jpg"
@@ -43,16 +40,16 @@ const Content = () => {
                     Villa
                   </h2>
                   <p className="leading-relaxed text-base line-clamp-3">
-                    Optimera er villa med solenergi! Minska kostnader
-                    och bli mer hållbara. Kontakta oss nu för
-                    skräddarsydda solpanelslösningar.
+                    Optimera er villa med solenergi! Minska kostnader och bli
+                    mer hållbara. Kontakta oss nu för skräddarsydda
+                    solpanelslösningar.
                   </p>
                 </div>
               </Link>
             </div>
 
             <div className="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
-              <Link href="/företag">
+              <Link href="/">
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <Image
                     src="/images/content-3.jpg"
@@ -69,9 +66,9 @@ const Content = () => {
                     Företag
                   </h2>
                   <p className="leading-relaxed text-base line-clamp-3">
-                    Optimera er företag med solenergi! Minska
-                    kostnader och bli mer hållbara. Kontakta oss nu
-                    för skräddarsydda solpanelslösningar.
+                    Optimera er företag med solenergi! Minska kostnader och bli
+                    mer hållbara. Kontakta oss nu för skräddarsydda
+                    solpanelslösningar.
                   </p>
                 </div>
               </Link>
@@ -94,15 +91,15 @@ const Content = () => {
                     Takbyte
                   </h2>
                   <p className="leading-relaxed text-base line-clamp-3">
-                    Optimera er företag med solenergi! Minska
-                    kostnader och bli mer hållbara. Kontakta oss nu
-                    för skräddarsydda solpanelslösningar.
+                    Optimera er företag med solenergi! Minska kostnader och bli
+                    mer hållbara. Kontakta oss nu för skräddarsydda
+                    solpanelslösningar.
                   </p>
                 </div>
               </Link>
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
-              <Link href="/bostadsrättsföreningar">
+              <Link href="/">
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <Image
                     src="/images/content-4.jpg"
@@ -119,15 +116,15 @@ const Content = () => {
                     Bostadsrättsföreningar
                   </h2>
                   <p className="leading-relaxed text-base line-clamp-3">
-                    Optimera er bostadsrättsförening med solenergi!
-                    Minska kostnader och bli mer hållbara. Kontakta
-                    oss nu för skräddarsydda solpanelslösningar.
+                    Optimera er bostadsrättsförening med solenergi! Minska
+                    kostnader och bli mer hållbara. Kontakta oss nu för
+                    skräddarsydda solpanelslösningar.
                   </p>
                 </div>
               </Link>
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
-              <Link href="/villa">
+              <Link href="/">
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <Image
                     src="/images/content-1.jpg"
@@ -144,16 +141,16 @@ const Content = () => {
                     Villa
                   </h2>
                   <p className="leading-relaxed text-base line-clamp-3">
-                    Optimera er villa med solenergi! Minska kostnader
-                    och bli mer hållbara. Kontakta oss nu för
-                    skräddarsydda solpanelslösningar.
+                    Optimera er villa med solenergi! Minska kostnader och bli
+                    mer hållbara. Kontakta oss nu för skräddarsydda
+                    solpanelslösningar.
                   </p>
                 </div>
               </Link>
             </div>
 
             <div className="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
-              <Link href="/företag">
+              <Link href="/">
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <Image
                     src="/images/content-3.jpg"
@@ -170,15 +167,15 @@ const Content = () => {
                     Företag
                   </h2>
                   <p className="leading-relaxed text-base line-clamp-3">
-                    Optimera er företag med solenergi! Minska
-                    kostnader och bli mer hållbara. Kontakta oss nu
-                    för skräddarsydda solpanelslösningar.
+                    Optimera er företag med solenergi! Minska kostnader och bli
+                    mer hållbara. Kontakta oss nu för skräddarsydda
+                    solpanelslösningar.
                   </p>
                 </div>
               </Link>
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
-              <Link href="/företag">
+              <Link href="/takbyte">
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <Image
                     src="/images/takbyte1.jpg"
@@ -195,15 +192,15 @@ const Content = () => {
                     Takbyte
                   </h2>
                   <p className="leading-relaxed text-base line-clamp-3">
-                    Optimera er företag med solenergi! Minska
-                    kostnader och bli mer hållbara. Kontakta oss nu
-                    för skräddarsydda solpanelslösningar.
+                    Optimera er företag med solenergi! Minska kostnader och bli
+                    mer hållbara. Kontakta oss nu för skräddarsydda
+                    solpanelslösningar.
                   </p>
                 </div>
               </Link>
             </div>
             <div className="xl:w-1/4 md:w-1/2 p-4" data-aos="fade-up">
-              <Link href="/bostadsrättsföreningar">
+              <Link href="/">
                 <div className="bg-gray-100 p-6 rounded-lg">
                   <Image
                     src="/images/content-4.jpg"
@@ -220,9 +217,9 @@ const Content = () => {
                     Bostadsrättsföreningar
                   </h2>
                   <p className="leading-relaxed text-base line-clamp-3">
-                    Optimera er bostadsrättsförening med solenergi!
-                    Minska kostnader och bli mer hållbara. Kontakta
-                    oss nu för skräddarsydda solpanelslösningar.
+                    Optimera er bostadsrättsförening med solenergi! Minska
+                    kostnader och bli mer hållbara. Kontakta oss nu för
+                    skräddarsydda solpanelslösningar.
                   </p>
                 </div>
               </Link>
