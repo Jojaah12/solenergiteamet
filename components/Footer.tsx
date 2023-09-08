@@ -34,12 +34,12 @@ const Footer = () => (
               </a> */}
             </li>
             <li>
-              <a
+              {/* <a
                 className="text-white hover:text-gray-800"
                 href="tel:+0733333333"
               >
                 0733 333333
-              </a>
+              </a> */}
             </li>
           </nav>
         </div>
