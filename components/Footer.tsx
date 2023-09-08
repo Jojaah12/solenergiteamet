@@ -22,81 +22,77 @@ const Footer = () => (
       <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
-            CATEGORIES
+            KONTAKTA OSS
+          </h2>
+          <nav className="list-none mb-10">
+            <li>
+              <a
+                className="text-white hover:text-gray-800"
+                href="mailto:info@solenergi.se"
+              >
+                info@solenergi.se
+              </a>
+            </li>
+            <li>
+              <a
+                className="text-white hover:text-gray-800"
+                href="tel:+0733333333"
+              >
+                0733 333333
+              </a>
+            </li>
+          </nav>
+        </div>
+        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
+            SOLENERGI
           </h2>
           <nav className="list-none mb-10">
             <li>
               <Link href="/" className="text-white hover:text-gray-800">
-                First Link
+                Solceller
+              </Link>
+            </li>
+            <li>
+              <Link href="/takbyte" className="text-white hover:text-gray-800">
+                Takbyte
               </Link>
             </li>
             <li>
               <Link href="/" className="text-white hover:text-gray-800">
-                Second Link
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="text-white hover:text-gray-800">
-                Third Link
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="text-white hover:text-gray-800">
-                Fourth Link
+                Produkter
               </Link>
             </li>
           </nav>
         </div>
         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
-            CATEGORIES
+            KUNDSERVICE
           </h2>
           <nav className="list-none mb-10">
             <li>
               <Link href="/" className="text-white hover:text-gray-800">
-                First Link
+                Kontakta oss
               </Link>
             </li>
             <li>
               <Link href="/" className="text-white hover:text-gray-800">
-                Second Link
+                Frågor och svar
               </Link>
             </li>
             <li>
               <Link href="/" className="text-white hover:text-gray-800">
-                Third Link
+                Garanti
               </Link>
             </li>
             <li>
               <Link href="/" className="text-white hover:text-gray-800">
-                Fourth Link
-              </Link>
-            </li>
-          </nav>
-        </div>
-        <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-          <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">
-            CATEGORIES
-          </h2>
-          <nav className="list-none mb-10">
-            <li>
-              <Link href="/" className="text-white hover:text-gray-800">
-                First Link
+                Cookies
               </Link>
             </li>
             <li>
               <Link href="/" className="text-white hover:text-gray-800">
-                Second Link
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="text-white hover:text-gray-800">
-                Third Link
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="text-white hover:text-gray-800">
-                Fourth Link
+                Villkor
               </Link>
             </li>
           </nav>
