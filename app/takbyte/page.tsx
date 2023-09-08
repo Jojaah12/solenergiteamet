@@ -38,25 +38,15 @@ const Takbyte = () => {
           </div>
         </div>
       </div>
+      <div className="sm:h-0 lg:h-20  bg-white"></div>
       {takbyteData.map((article, index) => (
         <div
           key={article.id}
-          className={`grid grid-cols-1 lg:grid-cols-2 text-gray-600 bg-white body-font ${
-            index % 2 === 0 ? "lg:flex-row-reverse" : "" // Reverse the order for even-indexed articles on larger screens
-          }`}
+          className="grid grid-cols-1 lg:grid-cols-2 text-gray-600 bg-white body-font "
         >
           {index % 2 === 0 ? (
             <>
               <GridContainer>
-                <Image
-                  className=""
-                  src={article.blockImage}
-                  alt="Takbyte"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </GridContainer>
-              <GridContainer>
                 <div className="w-full lg:p-16 p-6">
                   <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
                     {article.blockTitle}
@@ -69,10 +59,31 @@ const Takbyte = () => {
                   </div>
                 </div>
               </GridContainer>
+
+              <GridContainer>
+                <Image
+                  className=""
+                  src={article.blockImage}
+                  alt="Takbyte"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </GridContainer>
+              <div className="sm:h-20 lg:h-0  bg-white"></div>
             </>
           ) : (
             <>
               <GridContainer>
+                <Image
+                  className=""
+                  src={article.blockImage}
+                  alt="Takbyte"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </GridContainer>
+
+              <GridContainer>
                 <div className="w-full lg:p-16 p-6">
                   <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
                     {article.blockTitle}
@@ -84,15 +95,6 @@ const Takbyte = () => {
                     </p>
                   </div>
                 </div>
-              </GridContainer>
-              <GridContainer>
-                <Image
-                  className=""
-                  src={article.blockImage}
-                  alt="Takbyte"
-                  layout="fill"
-                  objectFit="cover"
-                />
               </GridContainer>
             </>
           )}
