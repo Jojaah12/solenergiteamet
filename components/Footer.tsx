@@ -54,7 +54,7 @@ const Footer = () => (
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white hover:text-gray-800">
+              <Link href="/takbyte" className="text-white hover:text-gray-800">
                 Takbyte
               </Link>
             </li>
@@ -92,7 +92,7 @@ const Footer = () => (
             </li>
             <li>
               <Link href="/" className="text-white hover:text-gray-800">
-                Vilkor
+                Villkor
               </Link>
             </li>
           </nav>
