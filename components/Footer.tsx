@@ -26,12 +26,12 @@ const Footer = () => (
           </h2>
           <nav className="list-none mb-10">
             <li>
-              <a
+              {/* <a
                 className="text-white hover:text-gray-800"
                 href="mailto:info@solenergi.se"
               >
                 info@solenergi.se
-              </a>
+              </a> */}
             </li>
             <li>
               <a
@@ -49,17 +49,26 @@ const Footer = () => (
           </h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href="/" className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Solceller
               </Link>
             </li>
             <li>
-              <Link href="/takbyte" className="text-white hover:text-gray-800">
+              <Link
+                href="/takbyte"
+                className="text-white hover:text-gray-800"
+              >
                 Takbyte
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Produkter
               </Link>
             </li>
@@ -71,27 +80,42 @@ const Footer = () => (
           </h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href="/" className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Kontakta oss
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Frågor och svar
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Garanti
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Cookies
               </Link>
             </li>
             <li>
-              <Link href="/" className="text-white hover:text-gray-800">
+              <Link
+                href="/"
+                className="text-white hover:text-gray-800"
+              >
                 Villkor
               </Link>
             </li>
@@ -152,7 +176,14 @@ const Footer = () => (
               className="w-5 h-5"
               viewBox="0 0 24 24"
             >
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <rect
+                width="20"
+                height="20"
+                x="2"
+                y="2"
+                rx="5"
+                ry="5"
+              ></rect>
               <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
             </svg>
           </a>
