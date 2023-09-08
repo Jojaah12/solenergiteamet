@@ -9,7 +9,7 @@ const Takbyte = () => {
         <div className=" h-screen fixed top-0 left-0 w-full object-fit z-[-1]">
           <Image
             className="opacity-16"
-            src="/images/takbyte3.jpg"
+            src="/images/green2.jpg"
             alt="Takbyte"
             layout="fill"
             objectFit="cover"
