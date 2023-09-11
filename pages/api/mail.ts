@@ -30,7 +30,7 @@ export default async function handler(
     } = req.body;
 
     const recipients: string[] = [
-      "abed@solenergiteamet.se",
+      "david.aljojah@gmail.com",
       "samir@solenergiteamet.se",
     ];
 

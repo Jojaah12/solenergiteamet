@@ -50,7 +50,7 @@ export const validate = ({
   if (!zipcode || zipcode.trim() === "") {
     errors.zipcode = "Zip Code is required";
   } else if (!/^\d{5}$/.test(zipcode)) {
-    errors.zipcode = "Invalid Zip Code";
+    errors.zipcode = "Invalid Postnummer";
   }
   if (!city || city.trim() === "") {
     errors.city = "Du måste fylla i detta fält.";
