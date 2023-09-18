@@ -28,6 +28,8 @@ const Header = () => {
         <Button
           variant="default"
           className="inline-flex items-center border-0 py-1 px-10 mt-4 md:mt-0 rounded-full"
+          scrollTo={true}
+          scrollToElementId="contact"
         >
           Boka konsultation
         </Button>
