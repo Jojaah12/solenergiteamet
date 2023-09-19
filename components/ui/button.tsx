@@ -37,9 +37,6 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
-  handleClick?: React.MouseEventHandler<HTMLButtonElement>;
-  scrollTo: boolean;
-  scrollToElementId: string;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -49,36 +46,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant,
       size,
       asChild = false,
-      handleClick,
-      scrollTo,
-      scrollToElementId,
+
       ...props
     },
     ref
   ) => {
     const Comp = asChild ? Slot : "button";
 
-    const handleButtonClick: React.MouseEventHandler<HTMLButtonElement> = (
-      event
-    ) => {
-      if (handleClick) {
-        handleClick(event);
-      }
-
-      // Conditional scrolling
-      if (scrollTo) {
-        const contactSection = document.getElementById(scrollToElementId);
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    };
-
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        onClick={handleButtonClick}
         {...props}
       />
     );
