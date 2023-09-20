@@ -67,14 +67,18 @@ const Menu = () => {
             <NavigationMenuTrigger>Solceller</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
+                <ListItem href="/" title="Villa">
+                  Investera tryggt, hållbart och lönsamt med solceller på din
+                  villa
                 </ListItem>
-                <ListItem href="/" title="Installation">
-                  How to install dependencies and structure your app.
+                <ListItem href="/" title="Företag">
+                  Investera tryggt, hållbart och lönsamt med solceller i ditt
+                  företag
                 </ListItem>
-                <ListItem href="/" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
+                <ListItem href="/" title="Bostadsrättsförening">
+                  {" "}
+                  Investera tryggt, hållbart och lönsamt med solceller i din
+                  bostadsrättsförening
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -83,15 +87,14 @@ const Menu = () => {
             <NavigationMenuTrigger>Takbyte</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/takbyte" title="Introduction">
-                  Behov av takbyte eller takreparation tillhör de vanligaste
-                  anledningarna till att man börjar fundera på solceller.
+                <ListItem href="/takbyte" title="Kom igång">
+                  Information om vad som behövs vid takbyte
                 </ListItem>
-                <ListItem href="/" title="Installation">
-                  How to install dependencies and structure your app.
+                <ListItem href="/" title="Vår process">
+                  Gå igenom vår process steg för steg
                 </ListItem>
-                <ListItem href="/" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
+                <ListItem href="/" title="Kostnadskalkyl">
+                  Få överblick med hjälp av vår kostnadskalkyl
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -100,14 +103,14 @@ const Menu = () => {
             <NavigationMenuTrigger>Produkter</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
+                <ListItem href="/" title="Solceller">
+                  Vi hjälper dig hitta och installera de rätta solcellerna
                 </ListItem>
-                <ListItem href="/" title="Installation">
-                  How to install dependencies and structure your app.
+                <ListItem href="/" title="Takbyte">
+                  Byt tak med vår expertis
                 </ListItem>
-                <ListItem href="/" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
+                <ListItem href="/" title="Skräddarsydda projekt">
+                  Vi erbjuder skräddarsydda projekt
                 </ListItem>
               </ul>
             </NavigationMenuContent>
