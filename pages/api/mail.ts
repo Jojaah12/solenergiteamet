@@ -29,10 +29,7 @@ export default async function handler(
       message: string;
     } = req.body;
 
-    const recipients: string[] = [
-      "david.aljojah@gmail.com",
-      "samir@solenergiteamet.se",
-    ];
+    const recipients: string[] = ["david.aljojah@gmail.com"];
 
     const msg = `
       Förnamn: ${firstName}
