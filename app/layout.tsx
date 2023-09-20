@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
+import Contact from "@/components/contactForm/Contact";
 
 const urbanist = Inter({ subsets: ["latin"] });
 
@@ -18,12 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={urbanist.className}
-        suppressHydrationWarning={true}
-      >
+      <body className={urbanist.className} suppressHydrationWarning={true}>
         <Header />
         {children}
+        <Contact />
         <Footer />
       </body>
     </html>

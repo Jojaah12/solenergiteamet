@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -48,9 +49,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const validationErrors = validate(formValues);
@@ -100,15 +99,18 @@ const Contact = () => {
   };
 
   return (
-    <section className="text-gray-600 bg-gray-300 body-font relative">
+    <section
+      id="contact"
+      className="text-gray-600 bg-gray-300 body-font relative"
+    >
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
             Boka konsultation
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Fyll i formuläret nedan för att boka in en kostnadsfri
-            konsultation med oss.
+            Fyll i formuläret nedan för att boka in en kostnadsfri konsultation
+            med oss.
           </p>
         </div>
 
@@ -122,9 +124,7 @@ const Contact = () => {
                 value={formValues.firstName}
                 onChange={handleChange}
                 error={errors.firstName}
-                errorMessage={
-                  !!errors.firstName ? errors.firstName : ""
-                }
+                errorMessage={!!errors.firstName ? errors.firstName : ""}
               />
               <Input
                 id="lastName"
@@ -133,9 +133,7 @@ const Contact = () => {
                 value={formValues.lastName}
                 onChange={handleChange}
                 error={errors.lastName}
-                errorMessage={
-                  !!errors.lastName ? errors.lastName : ""
-                }
+                errorMessage={!!errors.lastName ? errors.lastName : ""}
               />
               <Input
                 id="email"
@@ -153,9 +151,7 @@ const Contact = () => {
                 value={formValues.phoneNumber}
                 onChange={handleChange}
                 error={errors.phoneNumber}
-                errorMessage={
-                  !!errors.phoneNumber ? errors.phoneNumber : ""
-                }
+                errorMessage={!!errors.phoneNumber ? errors.phoneNumber : ""}
               />
               <Input
                 id="address"
@@ -221,8 +217,7 @@ const Contact = () => {
                   </svg>
                 </button>
                 <p className="text-xs text-gray-500 mt-3">
-                  Genom att klicka på “Skicka” bekräftar jag att jag
-                  läst
+                  Genom att klicka på “Skicka” bekräftar jag att jag läst
                   <br />
                   <Link href="/">
                     <span className="flex text-black underline">

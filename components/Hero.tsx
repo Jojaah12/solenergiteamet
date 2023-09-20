@@ -28,19 +28,10 @@ const Hero = () => {
             data-aos="fade-up"
           >
             Vi är specialister på solcellslösningar och erbjuder en
-            helhetslösning för solel. Vår engagerade personal arbetar
-            internt för att säkerställa kontroll över hela processen.
-            Du kan känna dig trygg med att köpa din lösning av oss.
+            helhetslösning för solel. Vår engagerade personal arbetar internt
+            för att säkerställa kontroll över hela processen. Du kan känna dig
+            trygg med att köpa din lösning av oss.
           </p>
-          <div className="flex justify-center">
-            <Button
-              variant="default"
-              className="inline-flex items-center border-0 py-1 px-10 mt-4 md:mt-0 rounded-full"
-              data-aos="fade-up"
-            >
-              Boka konsultation
-            </Button>
-          </div>
         </div>
       </div>
     </div>

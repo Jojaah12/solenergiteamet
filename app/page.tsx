@@ -21,7 +21,6 @@ const HomePage = () => {
       <Content />
       <Step />
       {/*       <Testimonials /> */}
-      <Contact />
     </main>
   );
 };
