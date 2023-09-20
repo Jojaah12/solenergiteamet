@@ -69,7 +69,7 @@ const Takbyte = () => {
                   objectFit="cover"
                 />
               </GridContainer>
-              <div className="sm:h-20 lg:h-0  bg-white"></div>
+              <div className="max-lg:h-20 lg:h-0  bg-white"></div>
             </>
           ) : (
             <>
