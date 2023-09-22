@@ -29,8 +29,8 @@ const Takbyte = () => {
               className="mb-8 leading-relaxed font-medium lg:w-1/2 w-1/2 text-white"
               data-aos="fade-up"
             >
-              Det kan många gånger vara lönsamt att montera solceller på villan
-              i samband med att man lägger ett nytt tak
+              Det kan många gånger vara lönsamt att montera solceller
+              på villan i samband med att man lägger ett nytt tak
             </p>
             <div className="flex justify-center"></div>
           </div>
