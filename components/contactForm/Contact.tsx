@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { ModalContainer } from "../ModalContainer";
 
 import Input from "./Input";
 import TextArea from "./TextArea";
@@ -37,6 +38,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [messageState, setMessageState] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleChange = (
     e:
@@ -88,6 +90,7 @@ const Contact = () => {
           setLoading(false);
           setSuccess(true);
           setMessageState(res.data.message);
+          setIsModalOpen(true);
         } else {
           setLoading(false);
           setMessageState(res.data.message);
@@ -198,7 +201,6 @@ const Contact = () => {
                 error={!!errors.message}
                 errorMessage={!!errors.message ? errors.message : ""}
               />
-
               <div className="p-2 w-full">
                 <button
                   type="submit"
@@ -235,6 +237,17 @@ const Contact = () => {
                   </Link>
                 </p>
               </div>
+              <ModalContainer
+                isOpen={isModalOpen}
+                closeModal={() => setIsModalOpen(false)}
+              >
+                <div>
+                  <p>
+                    Tack för att du har kontaktat oss. Vi kommer att
+                    svara inom 24 timmar.
+                  </p>
+                </div>
+              </ModalContainer>
             </div>
           </form>
         </div>
