@@ -128,11 +128,8 @@ const Contact = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-wrap -m-2">
               <Input
-                id="firstName"
-                label="Förnamn"
+                register={register("firstName")}
                 placeholder=""
-                value={formValues.firstName}
-                onChange={handleChange}
                 error={errors.firstName}
                 errorMessage={!!errors.firstName ? errors.firstName : ""}
               />
