@@ -9,6 +9,7 @@ import TextArea from "./TextArea";
 import axios from "axios";
 
 import { validate } from "@/lib/validate";
+import { useForm } from "react-hook-form";
 
 interface IValues {
   firstName: string;
@@ -23,6 +24,8 @@ interface IValues {
 
 interface IErrors extends Partial<IValues> {}
 const Contact = () => {
+  const { register, handleSubmit } = useForm();
+
   const [formValues, setFormValues] = useState({
     firstName: "",
     lastName: "",
@@ -51,9 +54,11 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
+  const onSubmit = (data: any) => {
+    console.log(data);
+  };
+
+  const OldHandleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const validationErrors = validate(formValues);
@@ -114,13 +119,13 @@ const Contact = () => {
             Boka konsultation
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Fyll i formuläret nedan för att boka in en kostnadsfri
-            konsultation med oss.
+            Fyll i formuläret nedan för att boka in en kostnadsfri konsultation
+            med oss.
           </p>
         </div>
 
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-wrap -m-2">
               <Input
                 id="firstName"
@@ -129,9 +134,7 @@ const Contact = () => {
                 value={formValues.firstName}
                 onChange={handleChange}
                 error={errors.firstName}
-                errorMessage={
-                  !!errors.firstName ? errors.firstName : ""
-                }
+                errorMessage={!!errors.firstName ? errors.firstName : ""}
               />
               <Input
                 id="lastName"
@@ -140,9 +143,7 @@ const Contact = () => {
                 value={formValues.lastName}
                 onChange={handleChange}
                 error={errors.lastName}
-                errorMessage={
-                  !!errors.lastName ? errors.lastName : ""
-                }
+                errorMessage={!!errors.lastName ? errors.lastName : ""}
               />
               <Input
                 id="email"
@@ -160,9 +161,7 @@ const Contact = () => {
                 value={formValues.phoneNumber}
                 onChange={handleChange}
                 error={errors.phoneNumber}
-                errorMessage={
-                  !!errors.phoneNumber ? errors.phoneNumber : ""
-                }
+                errorMessage={!!errors.phoneNumber ? errors.phoneNumber : ""}
               />
               <Input
                 id="address"
@@ -227,8 +226,7 @@ const Contact = () => {
                   </svg>
                 </button>
                 <p className="text-xs text-gray-500 mt-3">
-                  Genom att klicka på “Skicka” bekräftar jag att jag
-                  läst
+                  Genom att klicka på “Skicka” bekräftar jag att jag läst
                   <br />
                   <Link href="/">
                     <span className="flex text-black underline">
@@ -243,8 +241,8 @@ const Contact = () => {
               >
                 <div>
                   <p>
-                    Tack för att du har kontaktat oss. Vi kommer att
-                    svara inom 24 timmar.
+                    Tack för att du har kontaktat oss. Vi kommer att svara inom
+                    24 timmar.
                   </p>
                 </div>
               </ModalContainer>
