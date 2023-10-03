@@ -129,62 +129,45 @@ const Contact = () => {
             <div className="flex flex-wrap -m-2">
               <Input
                 register={register("firstName")}
-                placeholder=""
+                label="Förnamn"
                 error={errors.firstName}
                 errorMessage={!!errors.firstName ? errors.firstName : ""}
               />
               <Input
-                id="lastName"
+                register={register("lastName")}
                 label="Efternamn"
-                placeholder=" "
-                value={formValues.lastName}
-                onChange={handleChange}
                 error={errors.lastName}
                 errorMessage={!!errors.lastName ? errors.lastName : ""}
               />
               <Input
-                id="email"
+                register={register("email")}
                 label="E-post"
-                placeholder=""
-                value={formValues.email}
-                onChange={handleChange}
                 error={errors.email}
                 errorMessage={!!errors.email ? errors.email : ""}
               />
               <Input
-                id="phoneNumber"
+                register={register("phoneNumber")}
                 label="Telefonnummer"
                 placeholder="+4673 00 00 000"
-                value={formValues.phoneNumber}
-                onChange={handleChange}
                 error={errors.phoneNumber}
                 errorMessage={!!errors.phoneNumber ? errors.phoneNumber : ""}
               />
               <Input
-                id="address"
+                register={register("address")}
                 label="Adress"
-                placeholder=""
-                value={formValues.address}
-                onChange={handleChange}
                 error={errors.address}
                 className="lg:w-full md:w-full"
                 errorMessage={!!errors.address ? errors.address : ""}
               />
               <Input
-                id="zipcode"
+                register={register("zipcode")}
                 label="Postnummer"
-                placeholder=""
-                value={formValues.zipcode}
-                onChange={handleChange}
                 error={errors.zipcode}
                 errorMessage={!!errors.zipcode ? errors.zipcode : ""}
               />
               <Input
-                id="city"
+                register={register("city")}
                 label="Ort"
-                placeholder=""
-                value={formValues.city}
-                onChange={handleChange}
                 error={errors.city}
                 errorMessage={!!errors.city ? errors.city : ""}
               />
