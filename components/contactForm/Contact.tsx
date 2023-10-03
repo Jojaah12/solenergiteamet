@@ -172,11 +172,9 @@ const Contact = () => {
                 errorMessage={!!errors.city ? errors.city : ""}
               />
               <TextArea
-                id="message"
+                register={register("message")}
                 label="Meddelande"
                 placeholder="Ditt meddelande..."
-                value={formValues.message}
-                onChange={handleChange}
                 error={!!errors.message}
                 errorMessage={!!errors.message ? errors.message : ""}
               />
