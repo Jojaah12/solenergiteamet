@@ -9,7 +9,6 @@ type InputProps = {
   value?: string; // New prop for input value
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   error?: string;
-  errorMessage?: string;
   className?: string;
 };
 

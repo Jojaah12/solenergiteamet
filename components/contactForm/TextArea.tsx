@@ -8,8 +8,7 @@ type TextAreaProps = {
   placeholder?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void; // Corrected type
-  error?: boolean;
-  errorMessage?: string;
+  error?: string;
   className?: string;
 };
 

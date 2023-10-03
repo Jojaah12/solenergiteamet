@@ -1,37 +1,24 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
-import { ModalContainer } from "../ModalContainer";
-
-import Input from "./Input";
-import TextArea from "./TextArea";
-
 import axios from "axios";
-
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import { validate } from "@/lib/validate";
 import { useForm } from "react-hook-form";
 import { TFormSchema, formSchema } from "@/lib/formSchema";
+
+import { ModalContainer } from "../ModalContainer";
+import Input from "./Input";
+import TextArea from "./TextArea";
 
 const Contact = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<TFormSchema>({
     resolver: zodResolver(formSchema),
-  });
-
-  const [formValues, setFormValues] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    address: "",
-    zipcode: "",
-    city: "",
-    message: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -39,43 +26,22 @@ const Contact = () => {
   const [messageState, setMessageState] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const onSubmit = (data: TFormSchema) => {
-    console.log(data);
-  };
-
-  const OldHandleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const validationErrors = validate(formValues);
-
-    if (Object.keys(validationErrors).length > 0) {
-      return;
-    }
-
+  const onSubmit = async (e: TFormSchema) => {
     setLoading(true);
     axios
       .post("/api/mail", {
-        firstName: formValues.firstName,
-        lastName: formValues.lastName,
-        email: formValues.email,
-        phoneNumber: formValues.phoneNumber,
-        address: formValues.address,
-        zipcode: formValues.zipcode,
-        city: formValues.city,
-        message: formValues.message,
+        firstName: e.firstName,
+        lastName: e.lastName,
+        email: e.email,
+        phoneNumber: e.phoneNumber,
+        address: e.address,
+        zipcode: e.zipcode,
+        city: e.city,
+        message: e.message,
       })
       .then((res) => {
         if (res.status === 200) {
-          setFormValues({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phoneNumber: "",
-            address: "",
-            zipcode: "",
-            city: "",
-            message: "",
-          });
+          reset();
           setLoading(false);
           setSuccess(true);
           setMessageState(res.data.message);
@@ -114,7 +80,7 @@ const Contact = () => {
               <Input
                 register={register("firstName")}
                 label="Förnamn"
-                error={errors.firstName && errors.firstName.message}
+                error={errors.firstName?.message}
               />
 
               <Input
@@ -130,7 +96,7 @@ const Contact = () => {
               <Input
                 register={register("phoneNumber")}
                 label="Telefonnummer"
-                placeholder="+4673 00 00 000"
+                placeholder="+46 733 00 00 00"
                 error={errors.phoneNumber?.message}
               />
               <Input
@@ -152,8 +118,8 @@ const Contact = () => {
               <TextArea
                 register={register("message")}
                 label="Meddelande"
-                placeholder="Ditt meddelande..."
-                error={!!errors.message?.message}
+                placeholder="Beskriv gärna i vilket ärende du kontaktar oss"
+                error={errors.message?.message}
               />
               <div className="p-2 w-full">
                 <button
@@ -196,8 +162,8 @@ const Contact = () => {
               >
                 <div>
                   <p>
-                    Tack för att du har kontaktat oss. Vi kommer att svara inom
-                    24 timmar.
+                    Tack för att du kontaktat Solenergiteamet! Vi kontaktar dig
+                    inom 24 timmar.
                   </p>
                 </div>
               </ModalContainer>

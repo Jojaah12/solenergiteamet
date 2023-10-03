@@ -5,19 +5,20 @@ const phoneRegex = new RegExp(
 );
 
 export const formSchema = z.object({
-  firstName: z.string().min(1, { message: "Du måste ange förnamn" }),
-  lastName: z.string().min(1, { message: "Du måste ange efternamn" }),
-  email: z.string().min(1, { message: "Du måste ange email" }).email({
-    message: "Något stämmer inte med email adressen",
+  firstName: z.string().min(1, { message: "Vänligen ange förnamn" }),
+  lastName: z.string().min(1, { message: "Vänligen ange efternamn" }),
+  email: z.string().min(1, { message: "Vänligen ange email" }).email({
+    message: "Vänligen ange en giltig email",
   }),
   phoneNumber: z
     .string()
-    .min(1, { message: "Du måste ange telefonnummer" })
-    .regex(phoneRegex, "Något stämmer inte med telefonnumret"),
-  address: z.string().min(1, { message: "Du måste ange adress" }),
-  zipcode: z.string().min(1, { message: "Du måste ange postnummer" }),
-  city: z.string().min(1, { message: "Du måste ange stad" }),
-  message: z.string().min(1, { message: "Beskriv gärna ditt ärende" }),
+    .min(1, { message: "Vänligen ange giltigt telefonnummer" })
+    .regex(phoneRegex, "Vänligen ange ett giltigt telefonnummer"),
+
+  address: z.string().min(1, { message: "Vänligen ange adress" }),
+  zipcode: z.string().min(1, { message: "Vänligen ange postnummer" }),
+  city: z.string().min(1, { message: "Vänligen ange ort" }),
+  message: z.string(),
 });
 
 export type TFormSchema = z.infer<typeof formSchema>;
