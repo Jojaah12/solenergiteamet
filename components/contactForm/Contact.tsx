@@ -8,23 +8,20 @@ import TextArea from "./TextArea";
 
 import axios from "axios";
 
+import { zodResolver } from "@hookform/resolvers/zod";
+
 import { validate } from "@/lib/validate";
 import { useForm } from "react-hook-form";
+import { TFormSchema, formSchema } from "@/lib/formSchema";
 
-interface IValues {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  address: string;
-  zipcode: string;
-  city: string;
-  message: string;
-}
-
-interface IErrors extends Partial<IValues> {}
 const Contact = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<TFormSchema>({
+    resolver: zodResolver(formSchema),
+  });
 
   const [formValues, setFormValues] = useState({
     firstName: "",
@@ -37,24 +34,12 @@ const Contact = () => {
     message: "",
   });
 
-  const [errors, setErrors] = useState<IErrors>({});
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [messageState, setMessageState] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    setFormValues((prevInput) => ({
-      ...prevInput,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: TFormSchema) => {
     console.log(data);
   };
 
@@ -64,10 +49,9 @@ const Contact = () => {
     const validationErrors = validate(formValues);
 
     if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
       return;
     }
-    setErrors({});
+
     setLoading(true);
     axios
       .post("/api/mail", {
@@ -130,53 +114,46 @@ const Contact = () => {
               <Input
                 register={register("firstName")}
                 label="Förnamn"
-                error={errors.firstName}
-                errorMessage={!!errors.firstName ? errors.firstName : ""}
+                error={errors.firstName && errors.firstName.message}
               />
+
               <Input
                 register={register("lastName")}
                 label="Efternamn"
-                error={errors.lastName}
-                errorMessage={!!errors.lastName ? errors.lastName : ""}
+                error={errors.lastName?.message}
               />
               <Input
                 register={register("email")}
                 label="E-post"
-                error={errors.email}
-                errorMessage={!!errors.email ? errors.email : ""}
+                error={errors.email?.message}
               />
               <Input
                 register={register("phoneNumber")}
                 label="Telefonnummer"
                 placeholder="+4673 00 00 000"
-                error={errors.phoneNumber}
-                errorMessage={!!errors.phoneNumber ? errors.phoneNumber : ""}
+                error={errors.phoneNumber?.message}
               />
               <Input
                 register={register("address")}
                 label="Adress"
-                error={errors.address}
+                error={errors.address?.message}
                 className="lg:w-full md:w-full"
-                errorMessage={!!errors.address ? errors.address : ""}
               />
               <Input
                 register={register("zipcode")}
                 label="Postnummer"
-                error={errors.zipcode}
-                errorMessage={!!errors.zipcode ? errors.zipcode : ""}
+                error={errors.zipcode?.message}
               />
               <Input
                 register={register("city")}
                 label="Ort"
-                error={errors.city}
-                errorMessage={!!errors.city ? errors.city : ""}
+                error={errors.city?.message}
               />
               <TextArea
                 register={register("message")}
                 label="Meddelande"
                 placeholder="Ditt meddelande..."
-                error={!!errors.message}
-                errorMessage={!!errors.message ? errors.message : ""}
+                error={!!errors.message?.message}
               />
               <div className="p-2 w-full">
                 <button
