@@ -1,92 +1,47 @@
 "use client";
+
 import Link from "next/link";
 import { useState } from "react";
-import { ModalContainer } from "../ModalContainer";
+import axios from "axios";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { TFormSchema, formSchema } from "@/lib/formSchema";
 
+import { ModalContainer } from "../ModalContainer";
 import Input from "./Input";
 import TextArea from "./TextArea";
 
-import axios from "axios";
-
-import { validate } from "@/lib/validate";
-
-interface IValues {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  address: string;
-  zipcode: string;
-  city: string;
-  message: string;
-}
-
-interface IErrors extends Partial<IValues> {}
 const Contact = () => {
-  const [formValues, setFormValues] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    address: "",
-    zipcode: "",
-    city: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<TFormSchema>({
+    resolver: zodResolver(formSchema),
   });
 
-  const [errors, setErrors] = useState<IErrors>({});
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [messageState, setMessageState] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    setFormValues((prevInput) => ({
-      ...prevInput,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
-
-    const validationErrors = validate(formValues);
-
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-    setErrors({});
+  const onSubmit = async (e: TFormSchema) => {
     setLoading(true);
     axios
       .post("/api/mail", {
-        firstName: formValues.firstName,
-        lastName: formValues.lastName,
-        email: formValues.email,
-        phoneNumber: formValues.phoneNumber,
-        address: formValues.address,
-        zipcode: formValues.zipcode,
-        city: formValues.city,
-        message: formValues.message,
+        firstName: e.firstName,
+        lastName: e.lastName,
+        email: e.email,
+        phoneNumber: e.phoneNumber,
+        address: e.address,
+        zipcode: e.zipcode,
+        city: e.city,
+        message: e.message,
       })
       .then((res) => {
         if (res.status === 200) {
-          setFormValues({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phoneNumber: "",
-            address: "",
-            zipcode: "",
-            city: "",
-            message: "",
-          });
+          reset();
           setLoading(false);
           setSuccess(true);
           setMessageState(res.data.message);
@@ -114,92 +69,57 @@ const Contact = () => {
             Boka konsultation
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Fyll i formuläret nedan för att boka in en kostnadsfri
-            konsultation med oss.
+            Fyll i formuläret nedan för att boka in en kostnadsfri konsultation
+            med oss.
           </p>
         </div>
 
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-wrap -m-2">
               <Input
-                id="firstName"
+                register={register("firstName")}
                 label="Förnamn"
-                placeholder=""
-                value={formValues.firstName}
-                onChange={handleChange}
-                error={errors.firstName}
-                errorMessage={
-                  !!errors.firstName ? errors.firstName : ""
-                }
+                error={errors.firstName?.message}
               />
+
               <Input
-                id="lastName"
+                register={register("lastName")}
                 label="Efternamn"
-                placeholder=" "
-                value={formValues.lastName}
-                onChange={handleChange}
-                error={errors.lastName}
-                errorMessage={
-                  !!errors.lastName ? errors.lastName : ""
-                }
+                error={errors.lastName?.message}
               />
               <Input
-                id="email"
+                register={register("email")}
                 label="E-post"
-                placeholder=""
-                value={formValues.email}
-                onChange={handleChange}
-                error={errors.email}
-                errorMessage={!!errors.email ? errors.email : ""}
+                error={errors.email?.message}
               />
               <Input
-                id="phoneNumber"
+                register={register("phoneNumber")}
                 label="Telefonnummer"
-                placeholder="+4673 00 00 000"
-                value={formValues.phoneNumber}
-                onChange={handleChange}
-                error={errors.phoneNumber}
-                errorMessage={
-                  !!errors.phoneNumber ? errors.phoneNumber : ""
-                }
+                placeholder="+46 733 00 00 00"
+                error={errors.phoneNumber?.message}
               />
               <Input
-                id="address"
+                register={register("address")}
                 label="Adress"
-                placeholder=""
-                value={formValues.address}
-                onChange={handleChange}
-                error={errors.address}
+                error={errors.address?.message}
                 className="lg:w-full md:w-full"
-                errorMessage={!!errors.address ? errors.address : ""}
               />
               <Input
-                id="zipcode"
+                register={register("zipcode")}
                 label="Postnummer"
-                placeholder=""
-                value={formValues.zipcode}
-                onChange={handleChange}
-                error={errors.zipcode}
-                errorMessage={!!errors.zipcode ? errors.zipcode : ""}
+                error={errors.zipcode?.message}
               />
               <Input
-                id="city"
+                register={register("city")}
                 label="Ort"
-                placeholder=""
-                value={formValues.city}
-                onChange={handleChange}
-                error={errors.city}
-                errorMessage={!!errors.city ? errors.city : ""}
+                error={errors.city?.message}
               />
               <TextArea
-                id="message"
+                register={register("message")}
                 label="Meddelande"
-                placeholder="Ditt meddelande..."
-                value={formValues.message}
-                onChange={handleChange}
-                error={!!errors.message}
-                errorMessage={!!errors.message ? errors.message : ""}
+                placeholder="Beskriv gärna i vilket ärende du kontaktar oss"
+                error={errors.message?.message}
               />
               <div className="p-2 w-full">
                 <button
@@ -227,8 +147,7 @@ const Contact = () => {
                   </svg>
                 </button>
                 <p className="text-xs text-gray-500 mt-3">
-                  Genom att klicka på “Skicka” bekräftar jag att jag
-                  läst
+                  Genom att klicka på “Skicka” bekräftar jag att jag läst
                   <br />
                   <Link href="/">
                     <span className="flex text-black underline">
@@ -243,8 +162,8 @@ const Contact = () => {
               >
                 <div>
                   <p>
-                    Tack för att du har kontaktat oss. Vi kommer att
-                    svara inom 24 timmar.
+                    Tack för att du kontaktat Solenergiteamet! Vi kontaktar dig
+                    inom 24 timmar.
                   </p>
                 </div>
               </ModalContainer>
