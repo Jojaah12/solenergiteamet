@@ -118,7 +118,7 @@ const Contact = () => {
               <TextArea
                 register={register("message")}
                 label="Meddelande"
-                placeholder="Beskriv gärna i vilket ärende du kontaktar oss"
+                placeholder="Jag är intresserad av..."
                 error={errors.message?.message}
               />
               <div className="p-2 w-full">
