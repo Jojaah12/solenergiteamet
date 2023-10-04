@@ -7,12 +7,12 @@ const phoneRegex = new RegExp(
 export const formSchema = z.object({
   firstName: z.string().min(1, { message: "Vänligen ange förnamn" }),
   lastName: z.string().min(1, { message: "Vänligen ange efternamn" }),
-  email: z.string().min(1, { message: "Vänligen ange email" }).email({
-    message: "Vänligen ange en giltig email",
+  email: z.string().min(1, { message: "Vänligen ange e-post" }).email({
+    message: "Vänligen ange en giltig e-post adress",
   }),
   phoneNumber: z
     .string()
-    .min(1, { message: "Vänligen ange giltigt telefonnummer" })
+    .min(1, { message: "Vänligen ange telefonnummer" })
     .regex(phoneRegex, "Vänligen ange ett giltigt telefonnummer"),
 
   address: z.string().min(1, { message: "Vänligen ange adress" }),
