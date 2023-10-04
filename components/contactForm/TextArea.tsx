@@ -36,7 +36,7 @@ const TextArea = (props: TextAreaProps) => {
           onChange={onChange}
           className={`w-full h-32 bg-gray-100 bg-opacity-50 rounded border ${
             error ? "border-red-500" : "border-gray-300"
-          } focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out`}
+          } focus:border-[#FFD700] focus:bg-white focus:ring-2 focus:ring-[#FFD700] text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out`}
           {...register}
         />
         {error && <p className="text-xs text-red-500 mt-1">{error}</p>}
