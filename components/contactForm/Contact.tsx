@@ -162,8 +162,8 @@ const Contact = () => {
               >
                 <div>
                   <p>
-                    Tack för att du kontaktat Solenergiteamet! Vi kontaktar dig
-                    inom 24 timmar.
+                    Tack för att du kontaktat Solenergiteamet! Vi hör av oss
+                    till dig inom 24 timmar.
                   </p>
                 </div>
               </ModalContainer>
