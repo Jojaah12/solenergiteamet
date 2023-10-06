@@ -69,8 +69,8 @@ const Contact = () => {
             Boka konsultation
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Fyll i formuläret nedan för att boka in en kostnadsfri konsultation
-            med oss.
+            Fyll i formuläret nedan för att boka in en kostnadsfri
+            konsultation med oss.
           </p>
         </div>
 
@@ -147,7 +147,8 @@ const Contact = () => {
                   </svg>
                 </button>
                 <p className="text-xs text-gray-500 mt-3">
-                  Genom att klicka på “Skicka” bekräftar jag att jag läst
+                  Genom att klicka på “Skicka” bekräftar jag att jag
+                  läst
                   <br />
                   <Link href="/">
                     <span className="flex text-black underline">
@@ -162,8 +163,8 @@ const Contact = () => {
               >
                 <div>
                   <p>
-                    Tack för att du kontaktat Solenergiteamet! Vi hör av oss
-                    till dig inom 24 timmar.
+                    Tack för att du kontaktat Solenergiteamet! Vi hör
+                    av oss till dig inom 24 timmar.
                   </p>
                 </div>
               </ModalContainer>
