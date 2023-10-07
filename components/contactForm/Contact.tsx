@@ -21,13 +21,15 @@ const Contact = () => {
     resolver: zodResolver(formSchema),
   });
 
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [messageState, setMessageState] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formState, setFormState] = useState({
+    loading: false,
+    success: false,
+    message: "",
+    isModalOpen: false,
+  });
 
   const onSubmit = async (e: TFormSchema) => {
-    setLoading(true);
+    setFormState({ ...formState, loading: true });
     axios
       .post("/api/mail", {
         firstName: e.firstName,
@@ -42,20 +44,32 @@ const Contact = () => {
       .then((res) => {
         if (res.status === 200) {
           reset();
-          setLoading(false);
-          setSuccess(true);
-          setMessageState(res.data.message);
-          setIsModalOpen(true);
+          setFormState({
+            ...formState,
+            loading: false,
+            success: true,
+            message: res.data.message,
+            isModalOpen: true,
+          });
+
+          console.log(formState);
+          console.log(res.data.message);
         } else {
-          setLoading(false);
-          setMessageState(res.data.message);
+          setFormState({
+            ...formState,
+            loading: false,
+            message: res.data.message,
+          });
         }
       })
       .catch((err) => {
-        setLoading(false);
-        setMessageState(String(err.message));
+        setFormState({
+          ...formState,
+          loading: false,
+          message: String(err.message),
+        });
       });
-    setLoading(false);
+    setFormState({ ...formState, loading: false });
   };
 
   return (
@@ -69,8 +83,8 @@ const Contact = () => {
             Boka konsultation
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-            Fyll i formuläret nedan för att boka in en kostnadsfri
-            konsultation med oss.
+            Fyll i formuläret nedan för att boka in en kostnadsfri konsultation
+            med oss.
           </p>
         </div>
 
@@ -147,8 +161,7 @@ const Contact = () => {
                   </svg>
                 </button>
                 <p className="text-xs text-gray-500 mt-3">
-                  Genom att klicka på “Skicka” bekräftar jag att jag
-                  läst
+                  Genom att klicka på “Skicka” bekräftar jag att jag läst
                   <br />
                   <Link href="/">
                     <span className="flex text-black underline">
@@ -158,13 +171,15 @@ const Contact = () => {
                 </p>
               </div>
               <ModalContainer
-                isOpen={isModalOpen}
-                closeModal={() => setIsModalOpen(false)}
+                isOpen={formState.isModalOpen}
+                closeModal={() =>
+                  setFormState({ ...formState, isModalOpen: false })
+                }
               >
                 <div>
                   <p>
-                    Tack för att du kontaktat Solenergiteamet! Vi hör
-                    av oss till dig inom 24 timmar.
+                    Tack för att du kontaktat Solenergiteamet! Vi hör av oss
+                    till dig inom 24 timmar.
                   </p>
                 </div>
               </ModalContainer>
