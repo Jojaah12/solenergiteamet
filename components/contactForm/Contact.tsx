@@ -75,7 +75,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="text-gray-600 bg-gray-300 body-font relative"
+      className="flex justify-center items-center md:h-screen text-gray-600 bg-gray-300 body-font relative"
     >
       <div className="px-5 py-14 mx-auto">
         <div className="flex flex-col text-center w-full h-full mb-12">
@@ -88,7 +88,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="lg:w-1/2 md:w-2/3 mx-auto">
+        <div className="lg:w-1/2 md:w-2/3 mx-auto ">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-wrap -m-2">
               <Input
