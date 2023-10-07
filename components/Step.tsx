@@ -1,27 +1,16 @@
 import Image from "next/image";
 import React from "react";
+import InfoBanner from "./InfoBanner";
+import { STEPBANNERDATA } from "@/constants/constants";
 
 const Step = () => {
   return (
     <section className="text-gray-600 bg-white body-font">
       <div className="container px-5 py-24 mx-auto flex flex-wrap">
-        <div
-          className="flex flex-wrap w-full mb-20"
-          data-aos="fade-up"
-        >
-          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
-              Så funkar det!
-            </h1>
-            <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
-          </div>
-          <p className="lg:w-1/2 w-full leading-relaxed text-black">
-            Vi förstår att solceller kan vara överväldigande. Därför
-            har vi utformat en steg-för-steg-guide som visar hur en
-            solcellsinstallation med en komplett helhetsleverantör
-            fungerar. Låt oss guida er genom processen!
-          </p>
-        </div>
+        <InfoBanner
+          heading={STEPBANNERDATA.HEADING}
+          subHeading={STEPBANNERDATA.SUBHEADING}
+        />
         <div className="flex flex-wrap w-full">
           <div
             className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6"
@@ -44,17 +33,14 @@ const Step = () => {
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                 </svg>
               </div>
-              <div
-                className="flex-grow pl-4"
-                data-aos="zoom-in-right"
-              >
+              <div className="flex-grow pl-4" data-aos="zoom-in-right">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Hitta din lösning
                 </h2>
                 <p className="leading-relaxed">
-                  Använd vår solcellskalkylator för att se ditt
-                  potentiella sparande eller fyll i formuläret för att
-                  kontakta våra experter.
+                  Använd vår solcellskalkylator för att se ditt potentiella
+                  sparande eller fyll i formuläret för att kontakta våra
+                  experter.
                 </p>
               </div>
             </div>
@@ -75,16 +61,13 @@ const Step = () => {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                 </svg>
               </div>
-              <div
-                className="flex-grow pl-4"
-                data-aos="zoom-in-right"
-              >
+              <div className="flex-grow pl-4" data-aos="zoom-in-right">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Personlig rådgivning
                 </h2>
                 <p className="leading-relaxed">
-                  Fyll i ett intresseformulär så ringer vi upp dig och
-                  bokar in ett möte.
+                  Fyll i ett intresseformulär så ringer vi upp dig och bokar in
+                  ett möte.
                 </p>
               </div>
             </div>
@@ -106,16 +89,13 @@ const Step = () => {
                   <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
                 </svg>
               </div>
-              <div
-                className="flex-grow pl-4"
-                data-aos="zoom-in-right"
-              >
+              <div className="flex-grow pl-4" data-aos="zoom-in-right">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Smidig installation
                 </h2>
                 <p className="leading-relaxed">
-                  Vi monterar, besiktigar och lämnar sedan över
-                  anläggningen till dig.
+                  Vi monterar, besiktigar och lämnar sedan över anläggningen
+                  till dig.
                 </p>
               </div>
             </div>
@@ -137,17 +117,13 @@ const Step = () => {
                   <circle cx="12" cy="7" r="4"></circle>
                 </svg>
               </div>
-              <div
-                className="flex-grow pl-4"
-                data-aos="zoom-in-right"
-              >
+              <div className="flex-grow pl-4" data-aos="zoom-in-right">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Långsiktig support
                 </h2>
                 <p className="leading-relaxed">
-                  VHS cornhole pop-up, try-hard 8-bit iceland
-                  helvetica. Kinfolk bespoke try-hard cliche palo
-                  santo offal.
+                  VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk
+                  bespoke try-hard cliche palo santo offal.
                 </p>
               </div>
             </div>
@@ -166,16 +142,12 @@ const Step = () => {
                   <path d="M22 4L12 14.01l-3-3"></path>
                 </svg>
               </div>
-              <div
-                className="flex-grow pl-4"
-                data-aos="zoom-in-right"
-              >
+              <div className="flex-grow pl-4" data-aos="zoom-in-right">
                 <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
                   Slutligen
                 </h2>
                 <p className="leading-relaxed">
-                  Vår support finns här för dig under hela
-                  anläggningens livstid
+                  Vår support finns här för dig under hela anläggningens livstid
                 </p>
               </div>
             </div>
