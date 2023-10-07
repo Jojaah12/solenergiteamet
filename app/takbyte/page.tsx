@@ -1,6 +1,6 @@
 import Image from "next/image";
 import GridContainer from "@/components/GridContainer";
-import { TAKBYTEDATA } from "@/lib/constants";
+import { TAKBYTEDATA } from "@/constants/constants";
 
 const Takbyte = () => {
   return (

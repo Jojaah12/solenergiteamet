@@ -1,6 +1,6 @@
 "use client";
 
-import { HERODATA } from "@/lib/constants";
+import { HERODATA } from "@/constants/constants";
 
 const Hero = () => {
   return (

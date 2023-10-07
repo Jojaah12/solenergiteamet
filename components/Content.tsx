@@ -1,4 +1,4 @@
-import { CONTENTCARDDATA, CONTENTDATA } from "@/lib/constants";
+import { CONTENTCARDDATA, CONTENTDATA } from "@/constants/constants";
 import Image from "next/image";
 import Link from "next/link";
 
