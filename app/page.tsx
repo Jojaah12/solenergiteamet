@@ -4,7 +4,11 @@ import Hero from "@/components/Hero";
 import InfoBanner from "@/components/InfoBanner";
 import Step from "@/components/Step";
 import Testimonials from "@/components/Testimonial";
-import { CONTENTBANNERDATA, CONTENTCARDDATA } from "@/constants/constants";
+import {
+  CONTENTBANNERDATA,
+  CONTENTCARDDATA,
+  STEPBANNERDATA,
+} from "@/constants/constants";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
@@ -60,8 +64,16 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <section className="text-gray-600 bg-white body-font">
+        <div className="container px-5 py-24 mx-auto flex flex-wrap">
+          <InfoBanner
+            heading={STEPBANNERDATA.HEADING}
+            subHeading={STEPBANNERDATA.SUBHEADING}
+          />
 
-      <Step />
+          <Step />
+        </div>
+      </section>
       {/*       <Testimonials /> */}
     </main>
   );
