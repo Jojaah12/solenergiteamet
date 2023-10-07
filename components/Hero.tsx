@@ -1,5 +1,6 @@
 "use client";
-import { Button } from "./ui/button";
+
+import { HERODATA } from "@/constants/constants";
 
 const Hero = () => {
   return (
@@ -21,16 +22,13 @@ const Hero = () => {
             className="text-6xl lg:w-1/2 mb-4 font-semibold text-white"
             data-aos="fade-up"
           >
-            Solceller & Takbyte
+            {HERODATA.HEADING}
           </h1>
           <p
             className="mb-8 leading-relaxed font-medium lg:w-1/2 w-1/2 text-white"
             data-aos="fade-up"
           >
-            Vi är specialister på solcellslösningar och erbjuder en
-            helhetslösning för solel. Vår engagerade personal arbetar internt
-            för att säkerställa kontroll över hela processen. Du kan känna dig
-            trygg med att köpa din lösning av oss.
+            {HERODATA.SUBHEADING}
           </p>
         </div>
       </div>

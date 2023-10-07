@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { takbyteData } from "../../lib/data";
 import GridContainer from "@/components/GridContainer";
+import { TAKBYTEDATA } from "@/constants/constants";
 
 const Takbyte = () => {
   return (
@@ -29,17 +29,17 @@ const Takbyte = () => {
               className="mb-8 leading-relaxed font-medium lg:w-1/2 w-1/2 text-white"
               data-aos="fade-up"
             >
-              Det kan många gånger vara lönsamt att montera solceller
-              på villan i samband med att man lägger ett nytt tak
+              Det kan många gånger vara lönsamt att montera solceller på villan
+              i samband med att man lägger ett nytt tak
             </p>
             <div className="flex justify-center"></div>
           </div>
         </div>
       </div>
       <div className="sm:h-0 lg:h-20  bg-white"></div>
-      {takbyteData.map((article, index) => (
+      {TAKBYTEDATA.map((article, index) => (
         <div
-          key={article.id}
+          key={article.ID}
           className="grid grid-cols-1 lg:grid-cols-2 text-gray-600 bg-white body-font "
         >
           {index % 2 === 0 ? (
@@ -47,12 +47,12 @@ const Takbyte = () => {
               <GridContainer>
                 <div className="w-full lg:p-16 p-6">
                   <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
-                    {article.blockTitle}
+                    {article.BLOCKTITLE}
                   </h1>
                   <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
                   <div className="flex-column mt-6">
                     <p className="w-full leading-relaxed text-black mb-4">
-                      {article.blockText}
+                      {article.BLOCKTEXT}
                     </p>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ const Takbyte = () => {
               <GridContainer>
                 <Image
                   className="object-cover"
-                  src={article.blockImage}
+                  src={article.BLOCKIMAGE}
                   alt="Takbyte"
                   fill
                 />
@@ -73,7 +73,7 @@ const Takbyte = () => {
               <GridContainer>
                 <Image
                   className="object-cover"
-                  src={article.blockImage}
+                  src={article.BLOCKIMAGE}
                   alt="Takbyte"
                   fill
                 />
@@ -82,12 +82,12 @@ const Takbyte = () => {
               <GridContainer>
                 <div className="w-full lg:p-16 p-6">
                   <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-black">
-                    {article.blockTitle}
+                    {article.BLOCKTITLE}
                   </h1>
                   <div className="h-1 w-20 bg-[#DBA737] rounded"></div>
                   <div className="flex-column mt-6">
                     <p className="w-full leading-relaxed text-black mb-4">
-                      {article.blockText}
+                      {article.BLOCKTEXT}
                     </p>
                   </div>
                 </div>
