@@ -1,9 +1,15 @@
 "use client";
-import Contact from "@/components/contactForm/Contact";
-import Content from "@/components/Content";
+
+import ContentCard from "@/components/ContentCard";
 import Hero from "@/components/Hero";
+import InfoBanner from "@/components/InfoBanner";
 import Step from "@/components/Step";
-import Testimonials from "@/components/Testimonial";
+
+import {
+  CONTENTBANNERDATA,
+  CONTENTCARDDATA,
+  STEPBANNERDATA,
+} from "@/constants/constants";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -18,8 +24,25 @@ const HomePage = () => {
   return (
     <main>
       <Hero />
-      <Content />
-      <Step />
+      <section className="text-gray-600 bg-white body-font">
+        <div className="container px-5 py-24 mx-auto">
+          <InfoBanner
+            heading={CONTENTBANNERDATA.HEADING}
+            subHeading={CONTENTBANNERDATA.SUBHEADING}
+          />
+          <ContentCard data={CONTENTCARDDATA} />
+        </div>
+      </section>
+      <section className="text-gray-600 bg-white body-font">
+        <div className="container px-5 py-24 mx-auto flex flex-wrap">
+          <InfoBanner
+            heading={STEPBANNERDATA.HEADING}
+            subHeading={STEPBANNERDATA.SUBHEADING}
+          />
+
+          <Step />
+        </div>
+      </section>
       {/*       <Testimonials /> */}
     </main>
   );
