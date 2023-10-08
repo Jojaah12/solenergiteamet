@@ -18,16 +18,14 @@ export const STEPBANNERDATA: { HEADING: string; SUBHEADING: string } =
       "Vi förstår att solceller kan vara överväldigande. Därför har vi utformat en steg-för-steg-guide som visar hur en solcellsinstallation med en komplett helhetsleverantör fungerar. Låt oss guida er genom processen!",
   });
 
-export type ContentCardData = {
-  ID: number;
-  CARDTITLE: string;
-  CARDSUBTITLE: string;
-  CARDTEXT: string;
-  CARDIMAGE: string;
-  HREF: string;
-};
-
-export const CONTENTCARDDATA: ContentCardData[] = [
+export const CONTENTCARDDATA: readonly {
+  readonly ID: number;
+  readonly CARDTITLE: string;
+  readonly CARDSUBTITLE: string;
+  readonly CARDTEXT: string;
+  readonly CARDIMAGE: string;
+  readonly HREF: string;
+}[] = Object.freeze([
   {
     ID: 1,
     CARDTITLE: "Villa",
@@ -64,7 +62,7 @@ export const CONTENTCARDDATA: ContentCardData[] = [
     CARDIMAGE: "/images/content-3.jpg",
     HREF: "/takbyte",
   },
-];
+]);
 
 /* export const STEPDATA: readonly {
   readonly ID: number;

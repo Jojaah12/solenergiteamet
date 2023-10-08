@@ -1,9 +1,21 @@
-import { ContentCardData } from "@/constants/constants";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const ContentCard = ({ data }: { data: ContentCardData[] }) => {
+interface ContentCardData {
+  ID: number;
+  CARDTITLE: string;
+  CARDSUBTITLE: string;
+  CARDTEXT: string;
+  CARDIMAGE: string;
+  HREF: string;
+}
+
+const ContentCard = ({
+  data,
+}: {
+  readonly data: readonly ContentCardData[];
+}) => {
   return (
     <div className="flex flex-wrap -m-4">
       {data.map((content) => (
