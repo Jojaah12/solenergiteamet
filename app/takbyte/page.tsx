@@ -1,6 +1,6 @@
 import Image from "next/image";
 import GridContainer from "@/components/GridContainer";
-import { TAKBYTEDATA } from "@/constants/constants";
+import { TAKBYTECONTENTDATA, TAKBYTEHEADERDATA } from "@/constants/constants";
 
 const Takbyte = () => {
   return (
@@ -23,21 +23,20 @@ const Takbyte = () => {
               className="text-6xl lg:w-1/2 mb-4 font-semibold text-white"
               data-aos="fade-up"
             >
-              Takbyte
+              {TAKBYTEHEADERDATA.HEADING}
             </h1>
             <p
               className="mb-8 leading-relaxed font-medium lg:w-1/2 w-1/2 text-white"
               data-aos="fade-up"
             >
-              Det kan många gånger vara lönsamt att montera solceller på villan
-              i samband med att man lägger ett nytt tak
+              {TAKBYTEHEADERDATA.SUBHEADING}
             </p>
             <div className="flex justify-center"></div>
           </div>
         </div>
       </div>
       <div className="sm:h-0 lg:h-20  bg-white"></div>
-      {TAKBYTEDATA.map((article, index) => (
+      {TAKBYTECONTENTDATA.map((article, index) => (
         <div
           key={article.ID}
           className="grid grid-cols-1 lg:grid-cols-2 text-gray-600 bg-white body-font "

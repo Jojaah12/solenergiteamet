@@ -4,7 +4,7 @@ import ContentCard from "@/components/ContentCard";
 import Hero from "@/components/Hero";
 import InfoBanner from "@/components/InfoBanner";
 import Step from "@/components/Step";
-import Testimonials from "@/components/Testimonial";
+
 import {
   CONTENTBANNERDATA,
   CONTENTCARDDATA,
