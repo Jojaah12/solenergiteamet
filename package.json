@@ -29,7 +29,7 @@
     "eslint-config-next": "13.4.10",
     "lucide-react": "^0.261.0",
     "next": "13.4.10",
-    "postcss": "8.4.26",
+    "postcss": ">=8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.47.0",
@@ -41,6 +41,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@types/aos": "^3.0.4"
+    "@types/aos": "^3.0.4",
+    "postcss": ">=8.4.31"
   }
 }
