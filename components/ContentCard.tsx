@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 interface ContentCardData {
   ID: number;
@@ -17,13 +16,9 @@ const ContentCard = ({
   readonly data: readonly ContentCardData[];
 }) => {
   return (
-    <div className="flex flex-wrap -m-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {data.map((content) => (
-        <div
-          key={content.ID}
-          className="xl:w-1/4 md:w-1/2 p-4"
-          data-aos="fade-up"
-        >
+        <div key={content.ID} className="p-4" data-aos="fade-up">
           <Link href={content.HREF}>
             <div className="bg-gray-100 p-6 rounded-lg">
               <Image
