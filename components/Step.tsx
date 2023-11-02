@@ -1,6 +1,26 @@
 import React from "react";
 
 const Step = () => {
+  const statesData = [
+    { state: "Peak", value: 4 },
+    { state: "Demolition", value: 3 },
+    { state: "Inspiration", value: 2 },
+    { state: "Shame", value: 1 },
+    { state: "Action", value: 4 },
+    { state: "Fear", value: 3 },
+    { state: "Motivation", value: 2 },
+    { state: "Obligation", value: 1 },
+    { state: "Acceptance", value: 4 },
+    { state: "Shock/Confusion", value: 3 },
+    { state: "Contact", value: 2 },
+    { state: "Conflict", value: 1 },
+    { state: "Love", value: 4 },
+    { state: "Destruction", value: 3 },
+    { state: "Hope/Faith", value: 2 },
+    { state: "Zero", value: 1 },
+    // Feel free to expand this list further with more states and their respective values
+  ];
+
   return (
     <div className="flex flex-wrap w-full">
       <div
