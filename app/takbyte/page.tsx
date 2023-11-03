@@ -11,11 +11,11 @@ const Takbyte = () => {
   return (
     <>
       <div>
-        <Hero />
+        {/* <Hero />
         <div className="flex flex-col items-center justify-center">
           <Cards />
           <Cards />
-        </div>
+        </div> */}
       </div>
     </>
   );
