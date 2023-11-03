@@ -68,17 +68,17 @@ const Menu = () => {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/" title="Villa">
-                  Investera tryggt, hållbart och lönsamt med solceller på din
-                  villa
+                  Investera tryggt, hållbart och lönsamt med solceller
+                  på din villa
                 </ListItem>
                 <ListItem href="/" title="Företag">
-                  Investera tryggt, hållbart och lönsamt med solceller i ditt
-                  företag
+                  Investera tryggt, hållbart och lönsamt med solceller
+                  i ditt företag
                 </ListItem>
                 <ListItem href="/" title="Bostadsrättsförening">
                   {" "}
-                  Investera tryggt, hållbart och lönsamt med solceller i din
-                  bostadsrättsförening
+                  Investera tryggt, hållbart och lönsamt med solceller
+                  i din bostadsrättsförening
                 </ListItem>
               </ul>
             </NavigationMenuContent>
@@ -87,7 +87,7 @@ const Menu = () => {
             <NavigationMenuTrigger>Takbyte</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <ListItem href="/takbyte" title="Kom igång">
+                <ListItem href="/" title="Kom igång">
                   Information om vad som behövs vid takbyte
                 </ListItem>
                 <ListItem href="/" title="Vår process">
@@ -104,7 +104,8 @@ const Menu = () => {
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/" title="Solceller">
-                  Vi hjälper dig hitta och installera de rätta solcellerna
+                  Vi hjälper dig hitta och installera de rätta
+                  solcellerna
                 </ListItem>
                 <ListItem href="/" title="Takbyte">
                   Byt tak med vår expertis
@@ -137,7 +138,9 @@ const ListItem = React.forwardRef<
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
+          <div className="text-sm font-medium leading-none">
+            {title}
+          </div>
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
