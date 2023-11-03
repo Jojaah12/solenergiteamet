@@ -29,10 +29,7 @@ export default async function handler(
       message: string;
     } = req.body;
 
-    const recipients: string[] = [
-      "fredrik.marthinsens@gmail.com",
-      "david.aljojah@gmail.com",
-    ];
+    const recipients: string[] = ["david.aljojah@gmail.com"];
 
     const msg = `
       Förnamn: ${firstName}
@@ -54,7 +51,9 @@ export default async function handler(
     };
     try {
       await sgMail.send(data);
-      res.status(200).json({ message: "Your message was sent successfully." });
+      res
+        .status(200)
+        .json({ message: "Your message was sent successfully." });
     } catch (err) {
       res.status(500).json({
         message: `There was an error sending your message. ${err}`,
