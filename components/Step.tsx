@@ -18,7 +18,6 @@ const Step = () => {
     { state: "Destruction", value: 3 },
     { state: "Hope/Faith", value: 2 },
     { state: "Zero", value: 1 },
-    // Feel free to expand this list further with more states and their respective values
   ];
 
   return (
