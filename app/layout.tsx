@@ -4,12 +4,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import Contact from "@/components/contactForm/Contact";
+import Favicon from "../public/logo.svg";
 
 const urbanist = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Solenergiteamet",
   description: "Solenergi för en ljusare framtid",
+  icons: [{ rel: "icon", url: Favicon.src }],
 };
 
 export default function RootLayout({
@@ -19,7 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={urbanist.className} suppressHydrationWarning={true}>
+      <body
+        className={urbanist.className}
+        suppressHydrationWarning={true}
+      >
         <Header />
         {children}
         <Contact />
