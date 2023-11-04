@@ -29,9 +29,6 @@ const ContentCard = ({
                 className="rounded w-full object-contain mb-6"
                 data-aos="flip-left"
               />
-              <h3 className="tracking-widest text-[#DBA737] text-xs font-medium title-font">
-                {content.CARDSUBTITLE}
-              </h3>
               <h2 className="text-lg text-gray-900 font-medium title-font mb-4">
                 {content.CARDTITLE}
               </h2>
