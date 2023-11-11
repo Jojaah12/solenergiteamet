@@ -26,10 +26,6 @@ const HomePage = () => {
       <Hero />
       <section className="text-gray-600 bg-white body-font">
         <div className="container px-5 py-24 mx-auto">
-          <InfoBanner
-            heading={CONTENTBANNERDATA.HEADING}
-            subHeading={CONTENTBANNERDATA.SUBHEADING}
-          />
           <ContentCard data={CONTENTCARDDATA} />
         </div>
       </section>
