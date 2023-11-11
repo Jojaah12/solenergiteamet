@@ -1,33 +1,14 @@
 import React from "react";
 
 const Step = () => {
-  const statesData = [
-    { state: "Peak", value: 4 },
-    { state: "Demolition", value: 3 },
-    { state: "Inspiration", value: 2 },
-    { state: "Shame", value: 1 },
-    { state: "Action", value: 4 },
-    { state: "Fear", value: 3 },
-    { state: "Motivation", value: 2 },
-    { state: "Obligation", value: 1 },
-    { state: "Acceptance", value: 4 },
-    { state: "Shock/Confusion", value: 3 },
-    { state: "Contact", value: 2 },
-    { state: "Conflict", value: 1 },
-    { state: "Love", value: 4 },
-    { state: "Destruction", value: 3 },
-    { state: "Hope/Faith", value: 2 },
-    { state: "Zero", value: 1 },
-  ];
-
   return (
-    <div className="flex justify-center flex-wrap w-full">
+    <div className="flex flex-wrap w-full">
       <div
-        className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6"
+        className="lg:w-2/5 md:w-1/2 md:pr-20 md:py-6"
         data-aos="fade-up"
       >
         <div className="flex relative pb-12">
-          <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+          <div className="h-full w-10 absolute inset-5 flex items-center justify-center">
             <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
           <div className="flex-shrink-0 w-20 h-20 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
@@ -55,7 +36,7 @@ const Step = () => {
           </div>
         </div>
         <div className="flex relative pb-12">
-          <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+          <div className="h-full w-10 absolute inset-5 flex items-center justify-center">
             <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
           <div className="flex-shrink-0 w-20 h-20 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
@@ -82,7 +63,7 @@ const Step = () => {
           </div>
         </div>
         <div className="flex relative pb-12">
-          <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+          <div className="h-full w-10 absolute inset-5 flex items-center justify-center">
             <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
           <div className="flex-shrink-0 w-20 h-20 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
