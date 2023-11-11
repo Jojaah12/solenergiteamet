@@ -1,43 +1,24 @@
 import React from "react";
 
 const Step = () => {
-  const statesData = [
-    { state: "Peak", value: 4 },
-    { state: "Demolition", value: 3 },
-    { state: "Inspiration", value: 2 },
-    { state: "Shame", value: 1 },
-    { state: "Action", value: 4 },
-    { state: "Fear", value: 3 },
-    { state: "Motivation", value: 2 },
-    { state: "Obligation", value: 1 },
-    { state: "Acceptance", value: 4 },
-    { state: "Shock/Confusion", value: 3 },
-    { state: "Contact", value: 2 },
-    { state: "Conflict", value: 1 },
-    { state: "Love", value: 4 },
-    { state: "Destruction", value: 3 },
-    { state: "Hope/Faith", value: 2 },
-    { state: "Zero", value: 1 },
-  ];
-
   return (
     <div className="flex flex-wrap w-full">
       <div
-        className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6"
+        className="lg:w-2/5 md:w-1/2 md:pr-20 md:py-6"
         data-aos="fade-up"
       >
         <div className="flex relative pb-12">
-          <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+          <div className="h-full w-10 absolute inset-5 flex items-center justify-center">
             <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
+          <div className="flex-shrink-0 w-20 h-20 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
             <svg
               fill="none"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              className="w-5 h-5"
+              className="w-10 h-10"
               viewBox="0 0 24 24"
             >
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
@@ -55,17 +36,17 @@ const Step = () => {
           </div>
         </div>
         <div className="flex relative pb-12">
-          <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+          <div className="h-full w-10 absolute inset-5 flex items-center justify-center">
             <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
+          <div className="flex-shrink-0 w-20 h-20 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
             <svg
               fill="none"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              className="w-5 h-5"
+              className="w-10 h-10"
               viewBox="0 0 24 24"
             >
               <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
@@ -82,17 +63,17 @@ const Step = () => {
           </div>
         </div>
         <div className="flex relative pb-12">
-          <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
+          <div className="h-full w-10 absolute inset-5 flex items-center justify-center">
             <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
           </div>
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
+          <div className="flex-shrink-0 w-20 h-20 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
             <svg
               fill="none"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              className="w-5 h-5"
+              className="w-10 h-10"
               viewBox="0 0 24 24"
             >
               <circle cx="12" cy="5" r="3"></circle>
@@ -110,14 +91,14 @@ const Step = () => {
           </div>
         </div>
         <div className="flex relative">
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
+          <div className="flex-shrink-0 w-20 h-20 rounded-full bg-[#DBA737] inline-flex items-center justify-center text-white relative z-10">
             <svg
               fill="none"
               stroke="currentColor"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="2"
-              className="w-5 h-5"
+              className="w-10 h-10"
               viewBox="0 0 24 24"
             >
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
