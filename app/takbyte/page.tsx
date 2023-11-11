@@ -1,9 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import {
-  TAKBYTECONTENTDATA,
-  TAKBYTEHEADERDATA,
-} from "@/constants/constants";
 import Cards from "@/components/Cards";
 import Hero from "@/components/Hero";
 

@@ -1,20 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-interface ContentCardData {
+type ContentCardData = {
   ID: number;
   CARDTITLE: string;
-  CARDSUBTITLE: string;
   CARDTEXT: string;
   CARDIMAGE: string;
   HREF: string;
-}
+  CARDSUBTITLE?: string; // Make CARDSUBTITLE optional
+};
 
-const ContentCard = ({
-  data,
-}: {
-  readonly data: readonly ContentCardData[];
-}) => {
+const ContentCard = ({ data }: { data: ContentCardData[] }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
       {data.map((content) => (
