@@ -50,9 +50,3 @@ export const CONTENTCARDDATA = [
     HREF: "/takbyte",
   },
 ];
-
-export const TAKBYTEHEADERDATA = {
-  HEADING: "Takbyte",
-  SUBHEADING:
-    "Det kan många gånger vara lönsamt att montera solceller på villan i samband med att man lägger ett nytt tak",
-};
