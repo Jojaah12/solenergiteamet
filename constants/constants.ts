@@ -39,7 +39,7 @@ export const CONTENTCARDDATA = [
     CARDTEXT:
       "Optimera er villa med solenergi! Minska kostnader och bli mer hållbara. Kontakta oss nu för skräddarsydda solpanelslösningar.",
     CARDIMAGE: "/images/content-3.jpg",
-    HREF: "/takbyte",
+    HREF: "/",
   },
   {
     ID: 4,
@@ -47,6 +47,6 @@ export const CONTENTCARDDATA = [
     CARDTEXT:
       "Optimera er villa med solenergi! Minska kostnader och bli mer hållbara. Kontakta oss nu för skräddarsydda solpanelslösningar.",
     CARDIMAGE: "/images/content-3.jpg",
-    HREF: "/takbyte",
+    HREF: "/",
   },
 ];
