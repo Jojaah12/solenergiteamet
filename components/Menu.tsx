@@ -23,7 +23,7 @@ const data: {
 }[] = [
   {
     title: "Alert Dialog",
-    href: "/om-oss",
+    href: "/",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
@@ -62,9 +62,11 @@ const Menu = () => {
   return (
     <div className="flex md:ml-auto md:mr-auto flex-wrap items-center text-base">
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="gap-2 py-4 px-8 rounded-full">
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Solceller</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="rounded-3xl px-8 shadow-xl">
+              Solceller
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/" title="Villa">
@@ -84,7 +86,9 @@ const Menu = () => {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Takbyte</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="rounded-3xl px-8">
+              Takbyte
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/" title="Kom igång">
@@ -100,7 +104,9 @@ const Menu = () => {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Produkter</NavigationMenuTrigger>
+            <NavigationMenuTrigger className="rounded-3xl px-8">
+              Produkter
+            </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <ListItem href="/" title="Solceller">
