@@ -60,7 +60,7 @@ const data: {
 
 const Menu = () => {
   return (
-    <div className="flex md:ml-auto md:mr-auto flex-wrap items-center text-base">
+    <div className="hidden md:flex md:ml-auto md:mr-auto flex-wrap items-center text-base">
       <NavigationMenu>
         <NavigationMenuList className="gap-2 py-4 px-8 rounded-full">
           <NavigationMenuItem>
