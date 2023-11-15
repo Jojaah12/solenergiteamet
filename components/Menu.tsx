@@ -16,7 +16,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-const data: {
+/* const data: {
   title: string;
   href: string;
   description: string;
@@ -56,7 +56,7 @@ const data: {
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-];
+]; */
 
 const Menu = () => {
   return (
