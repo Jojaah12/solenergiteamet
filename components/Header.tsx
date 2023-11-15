@@ -4,9 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import Menu from "./Menu";
+import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
-  const handleButtonClick: React.MouseEventHandler<HTMLButtonElement> = () => {
+  const handleButtonClick: React.MouseEventHandler<
+    HTMLButtonElement
+  > = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
@@ -28,6 +31,7 @@ const Header = () => {
       {/* Center */}
 
       <Menu />
+      <HamburgerMenu />
 
       {/* Right side */}
       <div className="">
