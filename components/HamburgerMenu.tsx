@@ -40,7 +40,7 @@ const HamburgerMenu = () => {
             className="absolute top-4 right-4 text-gray-800"
             onClick={closeMenu}
           >
-            Close
+            § Close
           </button>
           {/* Add your menu items here */}
           <div className="mb-2 cursor-pointer">Menu Item 1</div>

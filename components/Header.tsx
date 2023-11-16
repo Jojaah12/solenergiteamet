@@ -31,18 +31,17 @@ const Header = () => {
       {/* Center */}
 
       <Menu />
-      <HamburgerMenu />
+      {/* <HamburgerMenu /> */}
 
       {/* Right side */}
-      <div className="">
-        <Button
-          onClick={handleButtonClick}
-          variant="default"
-          className="inline-flex items-center border-0 py-1 px-10 mt-4 md:mt-0 rounded-full"
-        >
-          Boka konsultation
-        </Button>
-      </div>
+
+      <Button
+        onClick={handleButtonClick}
+        variant="default"
+        className="inline-flex items-center border-0 py-1 px-10 mt-4 md:mt-0 rounded-full"
+      >
+        Boka konsultation
+      </Button>
     </header>
   );
 };
