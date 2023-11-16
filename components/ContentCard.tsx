@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+/* import Cards from "./Cards"; */
 
 type ContentCardData = {
   ID: number;
@@ -12,11 +13,14 @@ type ContentCardData = {
 
 const ContentCard = ({ data }: { data: ContentCardData[] }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       {data.map((content) => (
-        <div key={content.ID} className="p-4" data-aos="fade-up">
+        <div
+          key={content.ID}
+          className="p-4" /* data-aos="fade-up" */
+        >
           <Link href={content.HREF}>
-            <div className="bg-gray-100 p-6 rounded-lg">
+            <div className="bg-gray-100 p-6 rounded-lg shadow-2xl">
               <Image
                 src={content.CARDIMAGE}
                 alt={content.CARDTITLE}
@@ -35,6 +39,7 @@ const ContentCard = ({ data }: { data: ContentCardData[] }) => {
           </Link>
         </div>
       ))}
+      {/* <Cards /> */}
     </div>
   );
 };

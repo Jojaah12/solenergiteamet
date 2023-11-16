@@ -1,5 +1,6 @@
 "use client";
 
+import BenefitsSection from "@/components/BenefitsSection";
 import ContentCard from "@/components/ContentCard";
 import Hero from "@/components/Hero";
 import InfoBanner from "@/components/InfoBanner";
@@ -25,16 +26,17 @@ const HomePage = () => {
     <main>
       <Hero />
       <section className="text-gray-600 bg-white body-font">
-        <div className="container px-5 py-24 mx-auto">
+        <div className="container py-24 mx-auto">
           <InfoBanner
             heading={CONTENTBANNERDATA.HEADING}
             subHeading={CONTENTBANNERDATA.SUBHEADING}
           />
           <ContentCard data={CONTENTCARDDATA} />
         </div>
+        <BenefitsSection />
       </section>
       <section className="text-gray-600 bg-white body-font">
-        <div className="container px-5 py-24 mx-auto flex flex-wrap">
+        <div className="container py-24 mx-auto flex flex-wrap">
           <InfoBanner
             heading={STEPBANNERDATA.HEADING}
             subHeading={STEPBANNERDATA.SUBHEADING}
