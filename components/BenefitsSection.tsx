@@ -20,7 +20,7 @@ const BenefitsSection = () => {
                     width={500}
                     alt=""
                     className="object-center mx-auto rounded-lg shadow-2xl"
-                    src="/images/energy.png"
+                    src="/images/energi.png"
                   />
                 </div>
               </div>
