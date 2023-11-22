@@ -4,7 +4,9 @@ import React from "react";
 const BenefitsSection = () => {
   return (
     <section>
-      <div className="px-4 py-12 mx-auto bg-gray-200 max-w-7xl sm:px-6 md:px-12 rounded-lg shadow-lg lg:px-24 lg:py-24">
+      <div className="px-4 py-12 mx-auto bg-gray-200 max-w-7xl shadow-lg sm:px-6 md:px-12 rounded-lg lg:px-24 lg:py-24 relative">
+        <div className="after:absolute after:inset-x-0 after:w-full after:h-4 after:bg-gradient-to-b from-transparent "></div>
+
         <div className="flex flex-wrap items-center mx-auto max-w-7xl">
           <div className="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
             <div>
@@ -43,18 +45,6 @@ const BenefitsSection = () => {
               du inte bara solenergi – du väljer en partner för din
               hållbara framtid.
             </p>
-            {/* <div className="mt-0 lg:mt-6 max-w-7xl sm:flex">
-              <div className="mt-3 rounded-lg sm:mt-0">
-                <button className="items-center block px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-blue-600 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                  Get bundle
-                </button>
-              </div>
-              <div className="mt-3 rounded-lg sm:mt-0 sm:ml-3">
-                <button className="items-center block px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                  See features
-                </button>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
