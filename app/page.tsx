@@ -29,7 +29,7 @@ const HomePage = () => {
         <div className="container py-24 mx-auto">
           <InfoBanner
             heading={CONTENTBANNERDATA.HEADING}
-            subHeading=""
+            subHeading={CONTENTBANNERDATA.SUBHEADING}
           />
           <ContentCard data={CONTENTCARDDATA} />
         </div>
